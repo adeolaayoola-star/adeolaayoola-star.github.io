@@ -1,0 +1,1720 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Dr. Adeola Ayoola · Genomic Scientist | UCLA</title>
+<meta name="description" content="Dr. Adeola Ayoola, genomic scientist and Project Scientist in Human Genetics at UCLA. Expertise in population genomics, NGS pipeline development, and computational biology for industry and academic research." />
+<meta name="author" content="Adeola Ayoola, PhD" />
+
+<!-- Social / OpenGraph -->
+<meta property="og:title" content="Dr. Adeola Ayoola · Genomic Scientist" />
+<meta property="og:description" content="Population genomics, conservation science, and One Health across African landscapes." />
+<meta property="og:type" content="profile" />
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+  :root {
+    --ink: #0F1E1A;
+    --ink-soft: #2A3B35;
+    --muted: #5B6D65;
+    --forest: #0E3A2F;
+    --forest-deep: #072921;
+    --sage: #E4ECE5;
+    --sage-soft: #F1F5F1;
+    --bronze: #B8895A;
+    --bronze-deep: #96683F;
+    --cream: #F9F7F2;
+    --surface: #FFFFFF;
+    --line: #E5E1D8;
+    --line-strong: #D6D1C3;
+    --shadow-sm: 0 1px 2px rgba(15,30,26,0.05);
+    --shadow-md: 0 8px 24px rgba(15,30,26,0.07);
+    --shadow-lg: 0 20px 50px rgba(15,30,26,0.10);
+    --radius-sm: 6px;
+    --radius-md: 12px;
+    --radius-lg: 20px;
+    --ease: cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--ink);
+    background: var(--cream);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  ::selection { background: var(--forest); color: var(--cream); }
+
+  h1, h2, h3, h4 {
+    font-family: 'Fraunces', Georgia, serif;
+    font-weight: 500;
+    color: var(--ink);
+    letter-spacing: -0.01em;
+    line-height: 1.15;
+  }
+  h1 { font-size: clamp(2.5rem, 5.8vw, 4.4rem); font-weight: 400; }
+  h2 { font-size: clamp(1.9rem, 3.6vw, 2.75rem); font-weight: 400; }
+  h3 { font-size: 1.35rem; font-weight: 500; }
+  p { color: var(--ink-soft); }
+  a { color: inherit; text-decoration: none; transition: color 0.2s var(--ease); }
+
+  .container {
+    width: 100%;
+    max-width: 1240px;
+    margin: 0 auto;
+    padding: 0 28px;
+  }
+
+  .eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.78rem;
+    font-weight: 500;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--bronze-deep);
+  }
+  .eyebrow::before {
+    content: '';
+    width: 22px;
+    height: 1px;
+    background: var(--bronze);
+  }
+
+  /* ---------- NAV ---------- */
+  .nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgba(249, 247, 242, 0.82);
+    backdrop-filter: saturate(180%) blur(14px);
+    -webkit-backdrop-filter: saturate(180%) blur(14px);
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.3s var(--ease), background 0.3s var(--ease);
+  }
+  .nav.scrolled { border-bottom-color: var(--line); }
+  .nav-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 72px;
+  }
+  .brand {
+    font-family: 'Fraunces', serif;
+    font-size: 1.15rem;
+    font-weight: 500;
+    letter-spacing: -0.01em;
+    color: var(--ink);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .brand-mark {
+    display: inline-grid;
+    place-items: center;
+    width: 34px;
+    height: 34px;
+    background: var(--forest);
+    color: var(--cream);
+    border-radius: 50%;
+    font-family: 'Fraunces', serif;
+    font-size: 0.9rem;
+    font-weight: 500;
+    letter-spacing: 0;
+  }
+  .brand small {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.72rem;
+    color: var(--muted);
+    font-weight: 400;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    display: block;
+  }
+  .nav-links {
+    display: flex;
+    align-items: center;
+    gap: 36px;
+  }
+  .nav-links a {
+    font-size: 0.92rem;
+    color: var(--ink-soft);
+    font-weight: 400;
+    position: relative;
+  }
+  .nav-links a:hover { color: var(--forest); }
+  .nav-cta {
+    padding: 10px 18px;
+    background: var(--forest);
+    color: var(--cream) !important;
+    border-radius: 999px;
+    font-weight: 500;
+    transition: background 0.2s var(--ease), transform 0.2s var(--ease);
+  }
+  .nav-cta:hover { background: var(--forest-deep); transform: translateY(-1px); }
+  .menu-btn {
+    display: none;
+    width: 40px; height: 40px;
+    border: 1px solid var(--line);
+    background: transparent;
+    border-radius: 8px;
+    cursor: pointer;
+    padding: 0;
+    align-items: center;
+    justify-content: center;
+  }
+  .menu-btn span {
+    display: block;
+    width: 18px; height: 1.5px;
+    background: var(--ink);
+    position: relative;
+  }
+  .menu-btn span::before,
+  .menu-btn span::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 18px; height: 1.5px;
+    background: var(--ink);
+  }
+  .menu-btn span::before { top: -6px; }
+  .menu-btn span::after { top: 6px; }
+
+  /* ---------- HERO ---------- */
+  .hero {
+    padding: 64px 0 96px;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero-grid {
+    display: grid;
+    grid-template-columns: 1.15fr 1fr;
+    gap: 72px;
+    align-items: center;
+  }
+  .hero-text .eyebrow { margin-bottom: 22px; }
+  .hero-text h1 {
+    margin-bottom: 22px;
+  }
+  .hero-text h1 em {
+    font-style: italic;
+    font-weight: 300;
+    color: var(--forest);
+  }
+  .hero-lede {
+    font-size: 1.12rem;
+    color: var(--ink-soft);
+    max-width: 520px;
+    margin-bottom: 34px;
+    line-height: 1.65;
+  }
+  .hero-actions {
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+    margin-bottom: 48px;
+  }
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 14px 24px;
+    border-radius: 999px;
+    font-size: 0.92rem;
+    font-weight: 500;
+    transition: all 0.2s var(--ease);
+    cursor: pointer;
+    border: 1px solid transparent;
+  }
+  .btn-primary {
+    background: var(--forest);
+    color: var(--cream);
+  }
+  .btn-primary:hover { background: var(--forest-deep); transform: translateY(-1px); box-shadow: var(--shadow-md); }
+  .btn-ghost {
+    background: transparent;
+    color: var(--ink);
+    border-color: var(--line-strong);
+  }
+  .btn-ghost:hover { border-color: var(--forest); color: var(--forest); }
+  .btn svg { width: 14px; height: 14px; }
+
+  .hero-meta {
+    display: flex;
+    gap: 40px;
+    padding-top: 28px;
+    border-top: 1px solid var(--line);
+    flex-wrap: wrap;
+  }
+  .hero-meta .m-label {
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--muted);
+    margin-bottom: 6px;
+  }
+  .hero-meta .m-value {
+    font-family: 'Fraunces', serif;
+    font-size: 1.08rem;
+    color: var(--ink);
+  }
+
+  .hero-photo {
+    position: relative;
+    aspect-ratio: 4 / 5;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    background: linear-gradient(135deg, #1a4a3d 0%, #0e3a2f 55%, #072921 100%);
+    box-shadow: var(--shadow-lg);
+  }
+  .hero-photo img {
+    width: 100%; height: 100%;
+    object-fit: cover;
+    object-position: center top;
+    display: block;
+  }
+  .hero-photo .photo-fallback {
+    position: absolute; inset: 0;
+    display: grid;
+    place-items: center;
+    color: rgba(249, 247, 242, 0.92);
+    text-align: center;
+  }
+  .hero-photo .photo-fallback .init {
+    font-family: 'Fraunces', serif;
+    font-size: 7rem;
+    font-weight: 300;
+    letter-spacing: -0.02em;
+    line-height: 1;
+    margin-bottom: 18px;
+    opacity: 0.95;
+  }
+  .hero-photo .photo-fallback .fb-label {
+    font-size: 0.74rem;
+    text-transform: uppercase;
+    letter-spacing: 0.22em;
+    opacity: 0.75;
+  }
+  .hero-photo::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background: linear-gradient(180deg, transparent 60%, rgba(15,30,26,0.20) 100%);
+  }
+  .hero-badge {
+    position: absolute;
+    bottom: 22px;
+    left: 22px;
+    right: 22px;
+    background: rgba(249, 247, 242, 0.96);
+    backdrop-filter: blur(8px);
+    border-radius: 14px;
+    padding: 14px 18px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    box-shadow: 0 6px 20px rgba(7, 41, 33, 0.18);
+    z-index: 2;
+  }
+  .hero-badge .dot {
+    width: 9px; height: 9px; border-radius: 50%;
+    background: #26a37e;
+    box-shadow: 0 0 0 4px rgba(38, 163, 126, 0.18);
+    flex-shrink: 0;
+  }
+  .hero-badge .badge-text {
+    font-size: 0.84rem;
+    color: var(--ink);
+    line-height: 1.4;
+  }
+  .hero-badge .badge-text b { font-weight: 600; }
+
+  /* ---------- SECTION BASE ---------- */
+  section { padding: 78px 0; position: relative; }
+  .section-head {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 60px;
+    margin-bottom: 44px;
+    align-items: end;
+  }
+  .section-head .eyebrow { margin-bottom: 14px; }
+  .section-head h2 { max-width: 720px; }
+  .section-head p {
+    font-size: 1.05rem;
+    max-width: 640px;
+    color: var(--ink-soft);
+  }
+
+  /* ---------- ABOUT ---------- */
+  .about { background: var(--surface); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+  .about-head { align-items: start; margin-bottom: 36px; }
+  .about-head h2 { margin-bottom: 0; }
+  .about-text p {
+    font-size: 1.04rem;
+    margin-bottom: 16px;
+    line-height: 1.75;
+    color: var(--ink-soft);
+  }
+  .about-text p:last-child { margin-bottom: 0; }
+  .about-footnotes {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    margin-top: 32px;
+    padding-top: 28px;
+    border-top: 1px solid var(--line);
+  }
+  .about-footnotes .foot-k {
+    font-family: 'Fraunces', serif;
+    font-size: 1.6rem;
+    color: var(--forest);
+    margin-bottom: 4px;
+  }
+  .about-footnotes .foot-l {
+    font-size: 0.82rem;
+    color: var(--muted);
+    line-height: 1.4;
+  }
+
+  /* ---------- RESEARCH PILLARS ---------- */
+  .pillars-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+  }
+  .pillar {
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: var(--radius-md);
+    padding: 40px 32px;
+    position: relative;
+    transition: transform 0.3s var(--ease), box-shadow 0.3s var(--ease), border-color 0.3s var(--ease);
+  }
+  .pillar:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-md);
+    border-color: var(--sage);
+  }
+  .pillar .num {
+    font-family: 'Fraunces', serif;
+    font-size: 0.92rem;
+    color: var(--bronze);
+    margin-bottom: 18px;
+    letter-spacing: 0.14em;
+  }
+  .pillar h3 {
+    margin-bottom: 14px;
+    font-size: 1.28rem;
+  }
+  .pillar p {
+    font-size: 0.95rem;
+    line-height: 1.65;
+    color: var(--ink-soft);
+  }
+  .pillar .tags {
+    margin-top: 22px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+  .pillar .tags span {
+    font-size: 0.72rem;
+    padding: 4px 10px;
+    background: var(--sage-soft);
+    color: var(--forest);
+    border-radius: 999px;
+    font-weight: 500;
+  }
+
+  /* ---------- EXPERTISE ---------- */
+  .expertise { background: var(--surface); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+  .exp-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2px;
+    background: var(--line);
+    border: 1px solid var(--line);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+  }
+  .exp-cell {
+    background: var(--surface);
+    padding: 36px 32px;
+  }
+  .exp-cell h3 {
+    font-size: 1.15rem;
+    margin-bottom: 6px;
+  }
+  .exp-cell .exp-sub {
+    font-size: 0.82rem;
+    color: var(--bronze-deep);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+  }
+  .exp-cell ul {
+    list-style: none;
+    padding: 0;
+  }
+  .exp-cell li {
+    font-size: 0.92rem;
+    color: var(--ink-soft);
+    padding: 6px 0;
+    display: flex;
+    gap: 10px;
+    line-height: 1.5;
+  }
+  .exp-cell li::before {
+    content: '·';
+    color: var(--bronze);
+    flex-shrink: 0;
+    font-weight: 700;
+  }
+
+  /* ---------- PUBLICATIONS ---------- */
+  .pub-list {
+    display: grid;
+    gap: 2px;
+    background: var(--line);
+    border: 1px solid var(--line);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+  }
+  .pub-item {
+    background: var(--surface);
+    padding: 26px 30px;
+    display: grid;
+    grid-template-columns: 70px 1fr auto;
+    gap: 24px;
+    align-items: start;
+    transition: background 0.2s var(--ease);
+  }
+  .pub-item:hover { background: var(--sage-soft); }
+  .pub-item .year {
+    font-family: 'Fraunces', serif;
+    font-size: 1.1rem;
+    color: var(--bronze-deep);
+    font-weight: 500;
+  }
+  .pub-item .pub-main {
+    min-width: 0;
+  }
+  .pub-item .pub-title {
+    font-size: 0.98rem;
+    color: var(--ink);
+    font-weight: 500;
+    margin-bottom: 6px;
+    line-height: 1.45;
+  }
+  .pub-item .pub-authors {
+    font-size: 0.85rem;
+    color: var(--muted);
+    margin-bottom: 4px;
+  }
+  .pub-item .pub-authors b { color: var(--ink-soft); font-weight: 600; }
+  .pub-item .pub-journal {
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    font-size: 0.9rem;
+    color: var(--forest);
+  }
+  .pub-item .pub-ext {
+    color: var(--muted);
+    font-size: 0.8rem;
+    white-space: nowrap;
+    padding-top: 4px;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+  }
+  .pub-item .pub-ext:hover { color: var(--forest); }
+
+  .pub-item.featured {
+    background: linear-gradient(135deg, rgba(14, 58, 47, 0.05) 0%, rgba(184, 137, 90, 0.08) 100%);
+    border-left: 3px solid var(--bronze);
+  }
+  .pub-item.featured:hover { background: linear-gradient(135deg, rgba(14, 58, 47, 0.08) 0%, rgba(184, 137, 90, 0.12) 100%); }
+  .featured-tag {
+    display: inline-block;
+    font-size: 0.66rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--bronze-deep);
+    background: rgba(184, 137, 90, 0.12);
+    padding: 3px 9px;
+    border-radius: 999px;
+    margin-bottom: 8px;
+    font-weight: 600;
+  }
+  .pub-stats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 28px;
+    margin-bottom: 36px;
+    padding-bottom: 36px;
+    border-bottom: 1px solid var(--line);
+  }
+  .stat-big .k {
+    font-family: 'Fraunces', serif;
+    font-size: clamp(2.2rem, 4vw, 3.2rem);
+    color: var(--forest);
+    font-weight: 400;
+    line-height: 1;
+    margin-bottom: 8px;
+  }
+  .stat-big .k sup {
+    font-size: 0.5em;
+    color: var(--bronze);
+    font-weight: 500;
+  }
+  .stat-big .l {
+    font-size: 0.88rem;
+    color: var(--muted);
+    line-height: 1.45;
+  }
+
+  /* ---------- GRANTS ---------- */
+  .grants { background: var(--surface); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+  .grants-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+  }
+  .grant-card {
+    background: var(--cream);
+    border: 1px solid var(--line);
+    border-radius: var(--radius-md);
+    padding: 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    transition: transform 0.3s var(--ease), box-shadow 0.3s var(--ease);
+  }
+  .grant-card:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-md);
+  }
+  .grant-card .g-amount {
+    font-family: 'Fraunces', serif;
+    font-size: 2.1rem;
+    font-weight: 400;
+    color: var(--forest);
+    line-height: 1;
+  }
+  .grant-card .g-funder {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--ink);
+  }
+  .grant-card .g-desc {
+    font-size: 0.88rem;
+    color: var(--muted);
+    line-height: 1.55;
+    flex-grow: 1;
+  }
+  .grant-card .g-meta {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.78rem;
+    color: var(--bronze-deep);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding-top: 12px;
+    border-top: 1px solid var(--line);
+  }
+
+  /* ---------- SPEAKING ---------- */
+  .talks {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+  }
+  .talk-card {
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: var(--radius-md);
+    padding: 28px 30px;
+    transition: all 0.3s var(--ease);
+  }
+  .talk-card:hover {
+    border-color: var(--bronze);
+    transform: translateX(4px);
+  }
+  .talk-card .t-year {
+    display: inline-block;
+    font-size: 0.72rem;
+    padding: 4px 10px;
+    background: var(--sage-soft);
+    color: var(--forest);
+    border-radius: 999px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    margin-bottom: 14px;
+  }
+  .talk-card .t-type {
+    font-size: 0.72rem;
+    color: var(--bronze-deep);
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    margin-left: 8px;
+  }
+  .talk-card .t-title {
+    font-family: 'Fraunces', serif;
+    font-size: 1.1rem;
+    color: var(--ink);
+    line-height: 1.35;
+    margin-bottom: 10px;
+    font-weight: 500;
+  }
+  .talk-card .t-venue {
+    font-size: 0.88rem;
+    color: var(--muted);
+    font-style: italic;
+  }
+
+  /* ---------- NEWS ---------- */
+  .news { background: var(--surface); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+  .news-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+  .news-card {
+    display: flex;
+    flex-direction: column;
+    background: var(--cream);
+    border: 1px solid var(--line);
+    border-radius: var(--radius-md);
+    padding: 24px 26px;
+    transition: all 0.3s var(--ease);
+    cursor: pointer;
+    min-height: 220px;
+  }
+  .news-card:hover {
+    background: var(--surface);
+    border-color: var(--forest);
+    box-shadow: var(--shadow-md);
+    transform: translateY(-2px);
+  }
+  .news-card .n-source {
+    font-size: 0.72rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--bronze-deep);
+    margin-bottom: 14px;
+    font-weight: 600;
+  }
+  .news-card .n-headline {
+    font-family: 'Fraunces', serif;
+    font-size: 1.08rem;
+    color: var(--ink);
+    line-height: 1.35;
+    font-weight: 500;
+    margin-bottom: 16px;
+    flex-grow: 1;
+  }
+  .news-card .n-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 14px;
+    border-top: 1px solid var(--line-strong);
+    font-size: 0.82rem;
+    color: var(--muted);
+  }
+  .news-card .n-read {
+    color: var(--forest);
+    font-weight: 500;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .news-card:hover .n-read { color: var(--bronze-deep); }
+
+  /* ---------- AWARDS TIMELINE ---------- */
+  .timeline {
+    position: relative;
+    padding-left: 40px;
+  }
+  .timeline::before {
+    content: '';
+    position: absolute;
+    left: 8px;
+    top: 10px;
+    bottom: 10px;
+    width: 1px;
+    background: var(--line-strong);
+  }
+  .tl-item {
+    position: relative;
+    padding: 22px 0 22px 36px;
+  }
+  .tl-item::before {
+    content: '';
+    position: absolute;
+    left: -37px;
+    top: 28px;
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+    background: var(--cream);
+    border: 2px solid var(--bronze);
+  }
+  .tl-item.featured::before {
+    background: var(--bronze);
+    box-shadow: 0 0 0 6px rgba(184, 137, 90, 0.18);
+  }
+  .tl-year {
+    font-family: 'Fraunces', serif;
+    font-size: 0.95rem;
+    color: var(--bronze-deep);
+    margin-bottom: 6px;
+    letter-spacing: 0.04em;
+  }
+  .tl-title {
+    font-family: 'Fraunces', serif;
+    font-size: 1.18rem;
+    color: var(--ink);
+    font-weight: 500;
+    margin-bottom: 4px;
+    line-height: 1.35;
+  }
+  .tl-org {
+    font-size: 0.92rem;
+    color: var(--muted);
+    font-style: italic;
+  }
+
+  /* ---------- IMPACT ---------- */
+  .impact {
+    background: linear-gradient(165deg, var(--forest-deep) 0%, var(--forest) 100%);
+    color: var(--cream);
+    position: relative;
+    overflow: hidden;
+  }
+  .impact::before {
+    content: '';
+    position: absolute;
+    left: -10%; top: -20%;
+    width: 600px; height: 600px;
+    background: radial-gradient(circle, rgba(184,137,90,0.18), transparent 65%);
+    border-radius: 50%;
+    pointer-events: none;
+  }
+  .impact .container { position: relative; z-index: 1; }
+  .impact .eyebrow { color: var(--bronze); }
+  .impact .eyebrow::before { background: var(--bronze); }
+  .impact h2 { color: var(--cream); margin-bottom: 18px; }
+  .impact .impact-lede {
+    color: rgba(249, 247, 242, 0.8);
+    font-size: 1.08rem;
+    max-width: 640px;
+    line-height: 1.7;
+    margin-bottom: 64px;
+  }
+  .impact-stats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+  }
+  .impact-stat {
+    border-top: 1px solid rgba(249, 247, 242, 0.18);
+    padding-top: 24px;
+  }
+  .impact-stat .i-k {
+    font-family: 'Fraunces', serif;
+    font-size: clamp(2.2rem, 4vw, 3.2rem);
+    color: var(--cream);
+    font-weight: 400;
+    line-height: 1;
+    margin-bottom: 12px;
+  }
+  .impact-stat .i-k sup {
+    font-size: 0.55em;
+    color: var(--bronze);
+    font-weight: 500;
+    margin-left: 2px;
+  }
+  .impact-stat .i-l {
+    font-size: 0.92rem;
+    color: rgba(249, 247, 242, 0.72);
+    line-height: 1.55;
+  }
+
+  /* ---------- CONTACT ---------- */
+  .contact { padding-bottom: 60px; }
+  .contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 72px;
+    align-items: start;
+  }
+  .contact-text h2 {
+    font-size: clamp(2rem, 3.6vw, 3rem);
+    margin-bottom: 22px;
+  }
+  .contact-text h2 em { color: var(--forest); font-style: italic; font-weight: 300; }
+  .contact-text p {
+    font-size: 1.05rem;
+    max-width: 460px;
+    margin-bottom: 32px;
+    line-height: 1.7;
+  }
+  .contact-text .c-sig {
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    font-size: 1.1rem;
+    color: var(--forest);
+  }
+  .contact-card {
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: var(--radius-lg);
+    padding: 40px;
+    box-shadow: var(--shadow-sm);
+  }
+  .contact-card .c-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 0;
+    border-bottom: 1px solid var(--line);
+    gap: 16px;
+  }
+  .contact-card .c-row:last-of-type { border-bottom: none; }
+  .contact-card .c-label {
+    font-size: 0.72rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+  .contact-card .c-value {
+    font-size: 0.95rem;
+    color: var(--ink);
+    text-align: right;
+    font-weight: 500;
+  }
+  .contact-card .c-value a:hover { color: var(--forest); }
+  .socials {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 24px;
+  }
+  .socials a {
+    padding: 8px 16px;
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    font-size: 0.84rem;
+    color: var(--ink-soft);
+    transition: all 0.2s var(--ease);
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+  }
+  .socials a:hover {
+    border-color: var(--forest);
+    color: var(--forest);
+    background: var(--sage-soft);
+  }
+
+  /* ---------- FOOTER ---------- */
+  footer {
+    border-top: 1px solid var(--line);
+    padding: 36px 0;
+    background: var(--cream);
+  }
+  .footer-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    font-size: 0.85rem;
+    color: var(--muted);
+  }
+  .footer-inner a { color: var(--muted); }
+  .footer-inner a:hover { color: var(--forest); }
+
+  /* ---------- ANIMATIONS ---------- */
+  .reveal {
+    opacity: 0;
+    transform: translateY(16px);
+    transition: opacity 0.9s var(--ease), transform 0.9s var(--ease);
+  }
+  .reveal.in {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* ---------- RESPONSIVE ---------- */
+  @media (max-width: 960px) {
+    .nav-links a:not(.nav-cta) { display: none; }
+    .nav-links { gap: 14px; }
+    .section-head { grid-template-columns: 1fr; gap: 24px; }
+    .hero-grid { grid-template-columns: 1fr; gap: 48px; }
+    .hero { padding: 44px 0 64px; }
+    .pillars-grid { grid-template-columns: 1fr; }
+    .exp-grid { grid-template-columns: 1fr; }
+    .grants-grid { grid-template-columns: 1fr; }
+    .talks { grid-template-columns: 1fr; }
+    .news-grid { grid-template-columns: 1fr; }
+    .impact-stats { grid-template-columns: repeat(2, 1fr); gap: 28px; }
+    .pub-stats { grid-template-columns: repeat(2, 1fr); gap: 24px; }
+    .pub-item { grid-template-columns: 60px 1fr; }
+    .pub-item .pub-ext { grid-column: 1 / -1; padding-left: 84px; }
+    .contact-grid { grid-template-columns: 1fr; gap: 40px; }
+    .about-footnotes { grid-template-columns: 1fr; }
+    section { padding: 64px 0; }
+    .contact-card { padding: 28px; }
+    .hero-badge { left: 14px; right: 14px; bottom: 14px; padding: 12px 14px; }
+  }
+  @media (max-width: 540px) {
+    h1 { font-size: 2.2rem; }
+    .hero-meta { gap: 24px; }
+    .contact-card .c-row { flex-direction: column; align-items: flex-start; gap: 4px; }
+    .contact-card .c-value { text-align: left; }
+  }
+
+</style>
+</head>
+<body>
+
+<!-- ============ NAV ============ -->
+<header class="nav" id="nav">
+  <div class="container nav-inner">
+    <a href="#top" class="brand">
+      <span class="brand-mark">Aa</span>
+      <span>
+        Adeola Ayoola, PhD
+        <small>Genomic Scientist · UCLA</small>
+      </span>
+    </a>
+    <nav class="nav-links">
+      <a href="#about">About</a>
+      <a href="#research">Research</a>
+      <a href="#publications">Publications</a>
+      <a href="#news">News</a>
+      <a href="#contact" class="nav-cta">Get in touch</a>
+    </nav>
+  </div>
+</header>
+
+<!-- ============ HERO ============ -->
+<main id="top">
+<section class="hero">
+  <div class="container hero-grid">
+    <div class="hero-text">
+      <span class="eyebrow reveal">Project Scientist · UCLA David Geffen School of Medicine</span>
+      <h1 class="reveal">
+        Adeola Ayoola, <em>PhD</em>
+      </h1>
+      <p class="hero-lede reveal">
+        I'm a genomic scientist at UCLA's Department of Human Genetics. I work on population genomics,
+        conservation genomics, and One Health, with a focus on African primates and human populations.
+        I hold a PhD in Genetics from the Chinese Academy of Sciences and completed a postdoctoral
+        fellowship at Duke University.
+      </p>
+      <div class="hero-actions reveal">
+        <a class="btn btn-primary" href="#research">
+          Explore my research
+          <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+        </a>
+        <a class="btn btn-ghost" href="#contact">Get in touch</a>
+      </div>
+
+      <div class="hero-meta reveal">
+        <div>
+          <div class="m-label">Based in</div>
+          <div class="m-value">Durham, NC, USA</div>
+        </div>
+        <div>
+          <div class="m-label">Currently at</div>
+          <div class="m-value">UCLA · Human Genetics</div>
+        </div>
+        <div>
+          <div class="m-label">Doctorate</div>
+          <div class="m-value">Chinese Academy of Sciences</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-photo reveal">
+      <img id="heroPhoto" src="photo-hero.png" alt="Dr. Adeola Ayoola" onerror="this.style.display='none'; document.getElementById('heroFallback').style.display='grid';" />
+      <div class="photo-fallback" id="heroFallback" style="display: none;">
+        <div>
+          <div class="init">Aa</div>
+          <div class="fb-label">Adeola Ayoola</div>
+        </div>
+      </div>
+      <div class="hero-badge">
+        <span class="dot"></span>
+        <div class="badge-text"><b>Currently open to research collaborations</b></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ABOUT ============ -->
+<section class="about" id="about">
+  <div class="container">
+    <div class="section-head about-head">
+      <div>
+        <span class="eyebrow reveal">About</span>
+        <h2 class="reveal">About me</h2>
+      </div>
+      <div class="about-text reveal">
+        <p>
+          Seven-plus years building genomic pipelines that turn raw sequencing into research- and
+          clinical-grade data. I'm currently a Project Scientist in the Department of Human Genetics
+          at UCLA, running variant-calling, QC, and population-structure pipelines on cohorts of
+          1,200+ samples. My path runs through a PhD in Genetics at the Chinese Academy of Sciences
+          and a postdoctoral fellowship at Duke University. In production environments, I've cut
+          analytical error rates by 25% and lifted pipeline throughput by 40%.
+        </p>
+        <p>
+          My toolkit includes GATK, ANGSD, PLINK, ADMIXTURE, and Snakemake on SLURM, AWS, and Google
+          Cloud, paired with SOP design and regulatory-aligned documentation. I've published in
+          <em>Molecular Biology and Evolution</em>, <em>Scientific Reports</em>, and
+          <em>Frontiers in Genetics</em>, with grant support from the National Geographic Society,
+          the Fonseca Species Conservation Fund, and the Rufford Foundation. I work fluently across
+          academic research programs and industry teams in biotech and clinical genomics.
+        </p>
+      </div>
+    </div>
+
+    <div class="about-footnotes reveal">
+      <div>
+        <div class="foot-k">7+ yrs</div>
+        <div class="foot-l">In computational and laboratory genomics</div>
+      </div>
+      <div>
+        <div class="foot-k">28+</div>
+        <div class="foot-l">Peer-reviewed publications and manuscripts</div>
+      </div>
+      <div>
+        <div class="foot-k">1,200+</div>
+        <div class="foot-l">Samples in production pipelines</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ RESEARCH PILLARS ============ -->
+<section id="research">
+  <div class="container">
+    <div class="section-head">
+      <div>
+        <span class="eyebrow reveal">Research</span>
+        <h2 class="reveal">Research areas</h2>
+      </div>
+      <p class="reveal">
+        I work across three areas: population genomics, eDNA-based biodiversity and disease surveillance,
+        and ecological modeling. The methods carry across human cohorts, primate populations, and field
+        environments.
+      </p>
+    </div>
+
+    <div class="pillars-grid">
+      <div class="pillar reveal">
+        <div class="num">01</div>
+        <h3>Population genomics and adaptation</h3>
+        <p>
+          Whole-genome sequencing, demographic modeling, selection scans, and admixture inference applied to
+          human and non-human populations across African landscapes, including signatures of malaria
+          resistance and pigmentation variation along environmental gradients.
+        </p>
+        <div class="tags">
+          <span>WGS / WES</span><span>GATK</span><span>ADMIXTURE</span><span>PCAngsd</span><span>BEAST</span>
+        </div>
+      </div>
+      <div class="pillar reveal">
+        <div class="num">02</div>
+        <h3>eDNA, iDNA and biomolecular surveillance</h3>
+        <p>
+          Non-invasive environmental and invertebrate DNA methods for biodiversity inference and disease
+          surveillance, including Oxford Nanopore field sequencing deployed in UNESCO forests and
+          zoonotic-risk landscapes.
+        </p>
+        <div class="tags">
+          <span>eDNA / iDNA</span><span>Nanopore</span><span>Metabarcoding</span><span>One Health</span>
+        </div>
+      </div>
+      <div class="pillar reveal">
+        <div class="num">03</div>
+        <h3>Human and environmental modeling</h3>
+        <p>
+          Species distribution and ecological niche modeling to reconstruct how climate change, habitat
+          fragmentation, and land-use transformation shape biological diversity and public-health outcomes
+          at the landscape scale.
+        </p>
+        <div class="tags">
+          <span>MaxEnt</span><span>ArcGIS</span><span>QGIS</span><span>Niche modeling</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ EXPERTISE ============ -->
+<section class="expertise">
+  <div class="container">
+    <div class="section-head">
+      <div>
+        <span class="eyebrow reveal">Skills</span>
+        <h2 class="reveal">Skills and expertise</h2>
+      </div>
+      <p class="reveal">
+        Seven-plus years of training across wet-lab, computational, and field-based research, in
+        laboratories in China, Germany, Côte d'Ivoire, and the United States.
+      </p>
+    </div>
+
+    <div class="exp-grid reveal">
+      <div class="exp-cell">
+        <h3>Genomics and NGS</h3>
+        <div class="exp-sub">Sequencing · Variant calling · QC</div>
+        <ul>
+          <li>Whole-genome and exome sequencing (WGS / WES)</li>
+          <li>Variant calling: GATK, ANGSD, BCFtools, Samtools</li>
+          <li>QC pipelines: FastQC, MultiQC, Trimmomatic</li>
+          <li>Wet-lab: DNA/RNA extraction, primer design, qPCR</li>
+          <li>Oxford Nanopore sequencing and real-time field ID</li>
+        </ul>
+      </div>
+      <div class="exp-cell">
+        <h3>Population and statistical genetics</h3>
+        <div class="exp-sub">Structure · Diversity · Selection</div>
+        <ul>
+          <li>PLINK, ADMIXTURE, PCAngsd, STRUCTURE, BEAST</li>
+          <li>F<sub>ST</sub>, PCA, LD analysis, demographic inference</li>
+          <li>Selection scans on low-depth sequencing data</li>
+          <li>Genotype-likelihood frameworks (ANGSD)</li>
+          <li>GWAS and genotype modeling on clinical cohorts</li>
+        </ul>
+      </div>
+      <div class="exp-cell">
+        <h3>Computing and workflow</h3>
+        <div class="exp-sub">HPC · Cloud · Automation</div>
+        <ul>
+          <li>R (Bioconductor, ggplot2) and Python (Pandas, NumPy)</li>
+          <li>Bash scripting, SQL, workflow automation</li>
+          <li>Snakemake NGS pipelines, 40% faster runtime</li>
+          <li>SLURM HPC (UCLA Hoffman2), AWS, Google Cloud</li>
+          <li>Machine learning for genomic selection scans</li>
+        </ul>
+      </div>
+      <div class="exp-cell">
+        <h3>Spatial, ecological and field science</h3>
+        <div class="exp-sub">GIS · Niche modeling · Fieldwork</div>
+        <ul>
+          <li>MaxEnt v3.3.3k ecological niche modeling</li>
+          <li>ArcGIS and QGIS for habitat suitability mapping</li>
+          <li>Climate-change scenario projection</li>
+          <li>8+ years of field operations across West Africa</li>
+          <li>SOP design, chain-of-custody, IRB-aligned docs</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PUBLICATIONS ============ -->
+<section id="publications">
+  <div class="container">
+    <div class="section-head">
+      <div>
+        <span class="eyebrow reveal">Publications</span>
+        <h2 class="reveal">Selected publications</h2>
+      </div>
+      <p class="reveal">
+        Lead and co-author on papers in <em>Molecular Biology and Evolution</em>, <em>Scientific Reports</em>,
+        <em>Frontiers in Genetics</em>, and <em>Ecological Indicators</em>. The full publication list is on
+        <a href="https://scholar.google.com/citations?user=_vBiJnQAAAAJ&hl=en" target="_blank" rel="noopener" style="color: var(--forest); font-weight: 500; border-bottom: 1px solid var(--bronze);">Google Scholar</a>.
+      </p>
+    </div>
+
+    <div class="pub-stats reveal">
+      <div class="stat-big">
+        <div class="k">28<sup>+</sup></div>
+        <div class="l">Peer-reviewed articles and manuscripts</div>
+      </div>
+      <div class="stat-big">
+        <div class="k">5</div>
+        <div class="l">Journals where I serve as peer reviewer</div>
+      </div>
+      <div class="stat-big">
+        <div class="k">1,200<sup>+</sup></div>
+        <div class="l">Samples processed in UCLA / Duke pipelines</div>
+      </div>
+      <div class="stat-big">
+        <div class="k">10<sup>+</sup></div>
+        <div class="l">African taxa in comparative genomics studies</div>
+      </div>
+    </div>
+
+    <div class="pub-list reveal">
+      <article class="pub-item featured">
+        <div class="year">2020</div>
+        <div class="pub-main">
+          <span class="featured-tag">Featured</span>
+          <div class="pub-title">Population genomics reveals incipient speciation, introgression, and adaptation in the African Mona Monkey (<em>Cercopithecus mona</em>).</div>
+          <div class="pub-authors"><b>Ayoola AO</b>, et al.</div>
+          <div class="pub-journal">Molecular Biology and Evolution</div>
+        </div>
+        <a class="pub-ext" href="https://doi.org/10.1093/molbev/msaa248" target="_blank" rel="noopener">Read on MBE ↗</a>
+      </article>
+      <article class="pub-item">
+        <div class="year">2025</div>
+        <div class="pub-main">
+          <div class="pub-title">Morphology, DNA barcoding and range extension of a poorly known freshwater stingray <em>Fontitrygon garouaensis</em> from Nigerian inland water.</div>
+          <div class="pub-authors">Oladipo SO, Everett A, … <b>Ayoola AO</b>, …, Nneji LM.</div>
+          <div class="pub-journal">Integrative and Comparative Biology</div>
+        </div>
+        <a class="pub-ext" href="https://doi.org/10.1093/icb/icaf125" target="_blank" rel="noopener">DOI ↗</a>
+      </article>
+      <article class="pub-item">
+        <div class="year">2025</div>
+        <div class="pub-main">
+          <div class="pub-title">Genetic diversity of <em>Plasmodium falciparum</em> in people living with HIV in Ogbomoso, Nigeria: implications for malaria transmission and treatment.</div>
+          <div class="pub-authors">Odesola DE, …, <b>Ayoola AO</b>, Opaleye OO, Ojurongbe O.</div>
+          <div class="pub-journal">MalariaWorld Journal</div>
+        </div>
+        <a class="pub-ext" href="https://doi.org/10.5281/zenodo.15175103" target="_blank" rel="noopener">DOI ↗</a>
+      </article>
+      <article class="pub-item">
+        <div class="year">2024</div>
+        <div class="pub-main">
+          <div class="pub-title">The role of falciparum chloroquine resistance transporter gene in malaria drug resistance and its implication on malaria control in Africa.</div>
+          <div class="pub-authors">Ige AA, Adedokun TT, Otutu O, Olorunfemi AB, <b>Ayoola AO</b>, Ojurongbe O.</div>
+          <div class="pub-journal">Pan African Journal of Life Sciences</div>
+        </div>
+        <a class="pub-ext" href="https://doi.org/10.36108/pajols/4202/80.0270" target="_blank" rel="noopener">DOI ↗</a>
+      </article>
+      <article class="pub-item">
+        <div class="year">2023</div>
+        <div class="pub-main">
+          <div class="pub-title">Population structure and evolutionary history of the greater cane rat (<em>Thryonomys swinderianus</em>) from the Guinean Forests of West Africa.</div>
+          <div class="pub-authors">Babarinde IA, Adeola AC, …, <b>Ayoola AO</b>, …, Murphy RW.</div>
+          <div class="pub-journal">Frontiers in Genetics</div>
+        </div>
+        <a class="pub-ext" href="https://doi.org/10.3389/fgene.2023.1041103" target="_blank" rel="noopener">DOI ↗</a>
+      </article>
+      <article class="pub-item">
+        <div class="year">2023</div>
+        <div class="pub-main">
+          <div class="pub-title">Hunting of primates in the tropics: drivers, unsustainability, and ecological and socio-economic consequences.</div>
+          <div class="pub-authors">Koné I, Refisch J, Jost Robinson CA, <b>Ayoola AO</b>.</div>
+          <div class="pub-journal">Primates in Anthropogenic Landscapes, Springer</div>
+        </div>
+        <a class="pub-ext" href="https://doi.org/10.1007/978-3-031-11736-7_4" target="_blank" rel="noopener">DOI ↗</a>
+      </article>
+      <article class="pub-item">
+        <div class="year">2022</div>
+        <div class="pub-main">
+          <div class="pub-title">African suid genomes provide insights into local adaptation to diverse African environments.</div>
+          <div class="pub-authors">Hai-Bing X, Chen Y, Adeniyi AC, …, <b>Ayoola AO</b>, …, Zhang Y-P.</div>
+          <div class="pub-journal">Molecular Biology and Evolution</div>
+        </div>
+        <a class="pub-ext" href="https://doi.org/10.1093/molbev/msac2561" target="_blank" rel="noopener">DOI ↗</a>
+      </article>
+      <article class="pub-item">
+        <div class="year">2021</div>
+        <div class="pub-main">
+          <div class="pub-title">Impact of climate change on the spatial distribution of endemic legume species of the Guineo-Congolian forest, Africa.</div>
+          <div class="pub-authors">Oyebanji OO, Salako G, Nneji LM, …, <b>Ayoola AO</b>, Olagunju TE, Ighodalo DJ, Nneji IC.</div>
+          <div class="pub-journal">Ecological Indicators</div>
+        </div>
+        <a class="pub-ext" href="https://doi.org/10.1016/j.ecolind.2020.107282" target="_blank" rel="noopener">DOI ↗</a>
+      </article>
+      <article class="pub-item">
+        <div class="year">2020</div>
+        <div class="pub-main">
+          <div class="pub-title">DNA barcoding of silver butter catfish (<em>Schilbe intermedius</em>) reveals patterns of mitochondrial genetic diversity across African river systems.</div>
+          <div class="pub-authors">Nneji LM, Adeola AC, …, <b>Ayoola AO</b>, Okeyoyin AO, et al.</div>
+          <div class="pub-journal">Scientific Reports</div>
+        </div>
+        <a class="pub-ext" href="https://doi.org/10.1038/s41598-020-64126-y" target="_blank" rel="noopener">DOI ↗</a>
+      </article>
+      <article class="pub-item">
+        <div class="year">2019</div>
+        <div class="pub-main">
+          <div class="pub-title">Genomic and phenotypic analyses reveal mechanisms underlying homing ability in pigeon.</div>
+          <div class="pub-authors">Shao Y, Tian H-U, …, <b>Ayoola AO</b>, …, Wu D-D.</div>
+          <div class="pub-journal">Molecular Biology and Evolution</div>
+        </div>
+        <a class="pub-ext" href="https://doi.org/10.1093/molbev/msz245" target="_blank" rel="noopener">DOI ↗</a>
+      </article>
+    </div>
+
+  </div>
+</section>
+
+<!-- ============ GRANTS ============ -->
+<section class="grants">
+  <div class="container">
+    <div class="section-head">
+      <div>
+        <span class="eyebrow reveal">Funding</span>
+        <h2 class="reveal">Grants and funding</h2>
+      </div>
+      <p class="reveal">
+        Principal investigator and co-applicant on grants from the National Geographic Society, Fonseca
+        Species Conservation Fund, and the Rufford Foundation.
+      </p>
+    </div>
+
+    <div class="grants-grid">
+      <div class="grant-card reveal">
+        <div class="g-amount">$149,996</div>
+        <div class="g-funder">National Geographic Society</div>
+        <div class="g-desc">
+          Developing a multidisciplinary approach toward sustainable conservation of the threatened
+          Nigerian–Cameroon Highlands.
+        </div>
+        <div class="g-meta"><span>Co-applicant</span><span>2023</span></div>
+      </div>
+      <div class="grant-card reveal">
+        <div class="g-amount">$6,000</div>
+        <div class="g-funder">Fonseca Species Conservation Fund</div>
+        <div class="g-desc">
+          Zoonotic disease outbreak awareness and enhancing conservation of endangered Nigerian guenons
+          through ecological research and community engagement.
+        </div>
+        <div class="g-meta"><span>Principal investigator</span><span>2024</span></div>
+      </div>
+      <div class="grant-card reveal">
+        <div class="g-amount">$5,980</div>
+        <div class="g-funder">Rufford Small Grant</div>
+        <div class="g-desc">
+          Population survey and conservation action for the vulnerable red-eared guenon in Nigeria.
+        </div>
+        <div class="g-meta"><span>Principal investigator</span><span>2024</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SPEAKING ============ -->
+<section id="speaking">
+  <div class="container">
+    <div class="section-head">
+      <div>
+        <span class="eyebrow reveal">Talks</span>
+        <h2 class="reveal">Talks and conferences</h2>
+      </div>
+      <p class="reveal">
+        Selected platform presentations and invited talks at the Society for Molecular Biology and
+        Evolution, the International Primatological Society, and the African Primatological Society
+        Congress, among others.
+      </p>
+    </div>
+
+    <div class="talks">
+      <article class="talk-card reveal">
+        <span class="t-year">2025</span><span class="t-type">Oral</span>
+        <div class="t-title">Genetic variation, adaptation, and conservation of guenons across multiple natural environments.</div>
+        <div class="t-venue">International Primatological Society Meeting · Madagascar</div>
+      </article>
+      <article class="talk-card reveal">
+        <span class="t-year">2024</span><span class="t-type">Oral · SMBE</span>
+        <div class="t-title">Genetic variation, adaptation, and conservation genomics of guenons.</div>
+        <div class="t-venue">Society for Molecular Biology and Evolution · Puerto Vallarta, Mexico</div>
+      </article>
+      <article class="talk-card reveal">
+        <span class="t-year">2024</span><span class="t-type">Platform</span>
+        <div class="t-title">Current conservation status and extinction risk of Nigerian guenons.</div>
+        <div class="t-venue">American Society of Primatologists Annual Conference · Quintana Roo, Mexico</div>
+      </article>
+      <article class="talk-card reveal">
+        <span class="t-year">2024</span><span class="t-type">Platform</span>
+        <div class="t-title">Climate-driven ecological niche alteration and extinction risk in Nigerian guenons.</div>
+        <div class="t-venue">3rd African Primatological Society Congress · Potchefstroom, South Africa</div>
+      </article>
+      <article class="talk-card reveal">
+        <span class="t-year">2023</span><span class="t-type">Invited</span>
+        <div class="t-title">Beyond Biodiversity Conservation: Care.</div>
+        <div class="t-venue">Duke Biodiversity Conservation Symposium · Durham, NC</div>
+      </article>
+      <article class="talk-card reveal">
+        <span class="t-year">2023</span><span class="t-type">Oral</span>
+        <div class="t-title">Pathogen genetic and ecological diversity in Nigerian primates.</div>
+        <div class="t-venue">Carolina Malaria Research Annual Symposium · RTP, NC</div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ NEWS ============ -->
+<section class="news" id="news">
+  <div class="container">
+    <div class="section-head">
+      <div>
+        <span class="eyebrow reveal">Press</span>
+        <h2 class="reveal">In the news</h2>
+      </div>
+      <p class="reveal">
+        Press coverage of awards and honors, including features in Nigerian national outlets and alumni
+        publications.
+      </p>
+    </div>
+
+    <div class="news-grid">
+      <a class="news-card reveal" href="https://www.positivenaija.com/adeola-oluwakemi-ayoola-awarded-2019-excellent-international-student-in-china/" target="_blank" rel="noopener">
+        <div class="n-source">Positive Naija</div>
+        <div class="n-headline">Adeola Ayoola Awarded 2019 Excellent International Student in China.</div>
+        <div class="n-footer">
+          <span>Feature</span>
+          <span class="n-read">Read ↗</span>
+        </div>
+      </a>
+      <a class="news-card reveal" href="https://thenationonlineng.net/futa-alumna-wins-award-in-china/" target="_blank" rel="noopener">
+        <div class="n-source">The Nation</div>
+        <div class="n-headline">FUTA alumna wins award in China.</div>
+        <div class="n-footer">
+          <span>National press</span>
+          <span class="n-read">Read ↗</span>
+        </div>
+      </a>
+      <a class="news-card reveal" href="https://www.facebook.com/futacommunity/posts/futa-alumna-is-the-best-african-female-postgraduate-student-in-china-ayoola-adeo/2530529746967585/" target="_blank" rel="noopener">
+        <div class="n-source">FUTA Community</div>
+        <div class="n-headline">FUTA alumna is the best African female postgraduate student in China.</div>
+        <div class="n-footer">
+          <span>Alumni feature</span>
+          <span class="n-read">Read ↗</span>
+        </div>
+      </a>
+      <a class="news-card reveal" href="https://www.facebook.com/share/p/1JTTRpnNTq/" target="_blank" rel="noopener">
+        <div class="n-source">Community Post</div>
+        <div class="n-headline">Celebratory posting on academic milestone and research impact.</div>
+        <div class="n-footer">
+          <span>Social feature</span>
+          <span class="n-read">Read ↗</span>
+        </div>
+      </a>
+      <a class="news-card reveal" href="https://nicholas.duke.edu/sites/default/files/documents/biodiv_cons_symposium_pamphlet.pdf" target="_blank" rel="noopener">
+        <div class="n-source">Duke Nicholas School</div>
+        <div class="n-headline">Duke Biodiversity Conservation Symposium, invited speaker and organizer.</div>
+        <div class="n-footer">
+          <span>Symposium</span>
+          <span class="n-read">Read ↗</span>
+        </div>
+      </a>
+      <a class="news-card reveal" href="https://medschool.ucla.edu/people/adeola-ayoola-phd" target="_blank" rel="noopener">
+        <div class="n-source">UCLA Medicine</div>
+        <div class="n-headline">Faculty profile · Department of Human Genetics, David Geffen School of Medicine.</div>
+        <div class="n-footer">
+          <span>Institutional profile</span>
+          <span class="n-read">Visit ↗</span>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ AWARDS / TIMELINE ============ -->
+<section id="awards">
+  <div class="container">
+    <div class="section-head">
+      <div>
+        <span class="eyebrow reveal">Awards</span>
+        <h2 class="reveal">Awards and honors</h2>
+      </div>
+      <p class="reveal">
+        Fellowships, scholarships, and awards received between 2007 and 2020.
+      </p>
+    </div>
+
+    <div class="timeline reveal">
+      <div class="tl-item featured">
+        <div class="tl-year">2020</div>
+        <div class="tl-title">IPS Pre-Congress Training Programme Award</div>
+        <div class="tl-org">International Primatological Society</div>
+      </div>
+      <div class="tl-item featured">
+        <div class="tl-year">2019</div>
+        <div class="tl-title">Excellent International Student Award</div>
+        <div class="tl-org">University of Chinese Academy of Sciences</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-year">2019</div>
+        <div class="tl-title">Outstanding Volunteer, National Science Popularizing Public Activity</div>
+        <div class="tl-org">Chinese Academy of Sciences</div>
+      </div>
+      <div class="tl-item featured">
+        <div class="tl-year">2017</div>
+        <div class="tl-title">CAS-TWAS Fellowship Scholarship · Full PhD Funding</div>
+        <div class="tl-org">Chinese Academy of Sciences – The World Academy of Sciences</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-year">2017</div>
+        <div class="tl-title">3rd Best Postgraduate Student</div>
+        <div class="tl-org">Department of Ecotourism and Wildlife, FUTA, Nigeria</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-year">2007</div>
+        <div class="tl-title">Best Female Student, School of Science</div>
+        <div class="tl-org">Osun State, Nigeria</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ IMPACT ============ -->
+<section class="impact">
+  <div class="container">
+    <span class="eyebrow reveal">Outreach</span>
+    <h2 class="reveal">Outreach and mentorship</h2>
+    <p class="impact-lede reveal">
+      Alongside research, I run conservation education programs, train park rangers, and mentor
+      early-career scientists across USA, Nigeria Ghana, Togo, and Côte d'Ivoire.
+    </p>
+
+    <div class="impact-stats">
+      <div class="impact-stat reveal">
+        <div class="i-k">1,300<sup>+</sup></div>
+        <div class="i-l">Students, community members, and park rangers reached through conservation and zoonotic-disease education (2018 to present)</div>
+      </div>
+      <div class="impact-stat reveal">
+        <div class="i-k">51<sup>+</sup></div>
+        <div class="i-l">Junior scientists and trainees mentored across USA, Nigeria, Ghana, and Côte d'Ivoire</div>
+      </div>
+      <div class="impact-stat reveal">
+        <div class="i-k">27</div>
+        <div class="i-l">Park rangers trained in species ID, eDNA sampling, and biodiversity monitoring at Cross River and Gashaka Gumti NP</div>
+      </div>
+      <div class="impact-stat reveal">
+        <div class="i-k">3</div>
+        <div class="i-l">Graduate students co-advised at Humboldt Research Hub-Center for Emerging and Re-emerging Infectious Diseases, alongside field workshop facilitation</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CONTACT ============ -->
+<section class="contact" id="contact">
+  <div class="container contact-grid">
+    <div class="contact-text reveal">
+      <span class="eyebrow">Contact</span>
+      <h2>Get in touch</h2>
+      <p>
+        I'm open to research collaborations, speaking invitations, and the right opportunity in
+        biotech, clinical genomics, or academic research. Email is the fastest way to reach me.
+      </p>
+    </div>
+    <div class="contact-card reveal">
+      <div class="c-row">
+        <span class="c-label">Email</span>
+        <span class="c-value"><a href="mailto:adeolaayoola52@gmail.com">adeolaayoola52@gmail.com</a></span>
+      </div>
+      <div class="c-row">
+        <span class="c-label">Institutional</span>
+        <span class="c-value"><a href="mailto:aayoola@mednet.ucla.edu">aayoola@mednet.ucla.edu</a></span>
+      </div>
+      <div class="c-row">
+        <span class="c-label">Phone</span>
+        <span class="c-value">+1 (984) 329-4409</span>
+      </div>
+      <div class="c-row">
+        <span class="c-label">Location</span>
+        <span class="c-value">Durham NC, Los Angeles, CA</span>
+      </div>
+      <div class="c-row">
+        <span class="c-label">Affiliation</span>
+        <span class="c-value">UCLA David Geffen School of Medicine</span>
+      </div>
+      <div class="socials">
+        <a href="https://scholar.google.com/citations?user=_vBiJnQAAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar ↗</a>
+        <a href="https://www.researchgate.net/profile/Adeola-Ayoola-2" target="_blank" rel="noopener">ResearchGate ↗</a>
+        <a href="https://www.linkedin.com/in/adeola-o-ayoola-ph-d-55934a138/" target="_blank" rel="noopener">LinkedIn ↗</a>
+        <a href="https://https://github.com/adeolaayoola-star" target="_blank" rel="noopener">Github ↗</a>
+        <a href="https://medschool.ucla.edu/people/adeola-ayoola-phd" target="_blank" rel="noopener">UCLA profile ↗</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer>
+  <div class="container footer-inner">
+    <div>© <span id="yr"></span> Adeola Ayoola, PhD</div>
+    <div>Last updated <span id="updatedYear">2026</span></div>
+  </div>
+</footer>
+
+<script>
+  // Year
+  document.getElementById('yr').textContent = new Date().getFullYear();
+  document.getElementById('updatedYear').textContent = new Date().getFullYear();
+
+  // Nav scroll border
+  const nav = document.getElementById('nav');
+  const onScroll = () => {
+    if (window.scrollY > 12) nav.classList.add('scrolled');
+    else nav.classList.remove('scrolled');
+  };
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+
+  // Reveal on scroll
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add('in');
+        io.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+  // Simple count-up for stats (once)
+  const countUp = (el) => {
+    const txt = el.textContent.trim();
+    const match = txt.match(/^([\d,]+)(.*)$/);
+    if (!match) return;
+    const target = parseInt(match[1].replace(/,/g, ''), 10);
+    const suffix = match[2] || '';
+    if (isNaN(target)) return;
+    const dur = 1100;
+    const start = performance.now();
+    const step = (now) => {
+      const p = Math.min((now - start) / dur, 1);
+      const v = Math.round(target * (0.15 + 0.85 * (1 - Math.pow(1 - p, 3))));
+      el.textContent = v.toLocaleString() + suffix;
+      if (p < 1) requestAnimationFrame(step);
+      else el.textContent = target.toLocaleString() + suffix;
+    };
+    requestAnimationFrame(step);
+  };
+  const statIO = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        countUp(e.target);
+        statIO.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.6 });
+  document.querySelectorAll('.stat-big .k, .impact-stat .i-k, .about-footnotes .foot-k').forEach(el => {
+    // keep <sup> as decoration; only animate leading number
+    const supMatch = el.innerHTML.match(/<sup>/);
+    if (!supMatch) statIO.observe(el);
+  });
+</script>
+
+</body>
+</html>
