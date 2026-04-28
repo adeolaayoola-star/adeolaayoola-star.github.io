@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Dr. Adeola Ayoola · Genomic Scientist | UCLA</title>
-<meta name="description" content="Dr. Adeola Ayoola, genomic scientist and Project Scientist in Human Genetics at UCLA. Expertise in population genomics, NGS pipeline development, and computational biology for industry and academic research." />
+<title>Adeola Ayoola, PhD · Computational Genomics & Population Genetics Scientist</title>
+ <meta name="description" content="Computational Genomics and Population Genetics Scientist at UCLA. NGS pipelines, multi-omics, AI/ML genomics, infectious disease, translational research." />
 <meta name="author" content="Adeola Ayoola, PhD" />
 
 <!-- Social / OpenGraph -->
@@ -992,7 +992,50 @@
 </style>
 </head>
 <body>
+  
+    /* ── PHOTO GALLERIES ── */
+    .gallery-label { font-size: .78rem; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; color: var(--accent); margin: 2.5rem 0 1rem; display: flex; align-items: center; gap: .5rem; }
+    .gallery-label::before { content: ''; width: 16px; height: 2px; background: var(--accent); }
 
+    /* Hero photo strip — talks section */
+    .photo-strip { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 10px; margin: 2rem 0; border-radius: 12px; overflow: hidden; }
+    .photo-strip .photo-main { grid-row: 1 / 3; position: relative; overflow: hidden; }
+    .photo-strip .photo-sm { position: relative; overflow: hidden; }
+    .photo-strip img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform .4s ease; }
+    .photo-strip .photo-main { height: 380px; }
+    .photo-strip .photo-sm { height: 185px; }
+    .photo-strip img:hover { transform: scale(1.04); }
+    .photo-caption { font-size: .75rem; color: var(--ink-3); font-style: italic; margin-top: .5rem; line-height: 1.5; }
+
+    /* Masonry-style outreach grid */
+    .photo-masonry { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 2rem 0; }
+    .photo-masonry .photo-tall { grid-row: span 2; }
+    .photo-masonry .photo-cell { position: relative; overflow: hidden; border-radius: 8px; }
+    .photo-masonry .photo-cell img { width: 100%; height: 220px; object-fit: cover; display: block; transition: transform .4s ease; }
+    .photo-masonry .photo-tall img { height: 450px; }
+    .photo-masonry .photo-cell img:hover { transform: scale(1.04); }
+    .photo-overlay { position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(transparent, rgba(0,0,0,.55)); padding: .75rem .9rem .6rem; opacity: 0; transition: opacity .3s; }
+    .photo-cell:hover .photo-overlay { opacity: 1; }
+    .photo-overlay-text { font-size: .72rem; color: rgba(255,255,255,.92); font-weight: 500; line-height: 1.4; }
+
+    /* Lightbox */
+    .lightbox { display: none; position: fixed; inset: 0; background: rgba(0,0,0,.88); z-index: 1000; align-items: center; justify-content: center; cursor: zoom-out; }
+    .lightbox.open { display: flex; }
+    .lightbox img { max-width: 90vw; max-height: 88vh; object-fit: contain; border-radius: 6px; box-shadow: 0 32px 80px rgba(0,0,0,.6); }
+    .lightbox-close { position: absolute; top: 1.5rem; right: 2rem; color: #fff; font-size: 2rem; cursor: pointer; line-height: 1; font-weight: 300; }
+    .lightbox-caption { position: absolute; bottom: 1.5rem; left: 50%; transform: translateX(-50%); color: rgba(255,255,255,.8); font-size: .82rem; text-align: center; white-space: nowrap; }
+
+    @media (max-width: 700px) {
+      .photo-strip { grid-template-columns: 1fr 1fr; }
+      .photo-strip .photo-main { grid-row: 1; grid-column: 1 / 3; height: 220px; }
+      .photo-strip .photo-sm { height: 140px; }
+      .photo-masonry { grid-template-columns: 1fr 1fr; }
+      .photo-masonry .photo-tall img { height: 300px; }
+    }
+  </style>
+</head>
+<body>
+  
 <!-- ============ NAV ============ -->
 <header class="nav" id="nav">
   <div class="container nav-inner">
@@ -1013,60 +1056,52 @@
   </div>
 </header>
 
-<!-- ============ HERO ============ -->
-<main id="top">
-<section class="hero">
-  <div class="container hero-grid">
-    <div class="hero-text">
-      <span class="eyebrow reveal">Project Scientist · UCLA David Geffen School of Medicine</span>
-      <h1 class="reveal">
-        Adeola Ayoola, <em>PhD</em>
-      </h1>
-      <p class="hero-lede reveal">
-        I'm a genomic scientist at UCLA's Department of Human Genetics. I work on population genomics,
-        conservation genomics, and One Health, with a focus on African primates and human populations.
-        I hold a PhD in Genetics from the Chinese Academy of Sciences and completed a postdoctoral
-        fellowship at Duke University.
-      </p>
-      <div class="hero-actions reveal">
-        <a class="btn btn-primary" href="#research">
-          Explore my research
-          <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
-        </a>
-        <a class="btn btn-ghost" href="#contact">Get in touch</a>
-      </div>
-
-      <div class="hero-meta reveal">
-        <div>
-          <div class="m-label">Based in</div>
-          <div class="m-value">Durham, NC, USA</div>
-        </div>
-        <div>
-          <div class="m-label">Currently at</div>
-          <div class="m-value">UCLA · Human Genetics</div>
-        </div>
-        <div>
-          <div class="m-label">Doctorate</div>
-          <div class="m-value">Chinese Academy of Sciences</div>
-        </div>
-      </div>
+<!-- HERO -->
+<div class="hero" id="top">
+  <div class="hero-text fade-in">
+    <div class="hero-eyebrow">Project Scientist · UCLA David Geffen School of Medicine</div>
+    <h1 class="hero-name">Adeola<br><em>Ayoola,</em> PhD</h1>
+    <p class="hero-title">Computational Genomics &amp; Population Genetics Scientist</p>
+    <p class="hero-desc">I build production-grade NGS pipelines and multi-omics analytical frameworks that translate raw sequencing data into mechanistic biological insight — across human populations, nonhuman primate models, and infectious disease systems. My work sits at the intersection of computational genomics, population genetics, and translational research.</p>
+    <div class="hero-tags">
+      <span class="tag tag-accent">NGS Pipelines</span>
+      <span class="tag tag-accent">Multi-Omics</span>
+      <span class="tag tag-accent">AI/ML Genomics</span>
+      <span class="tag">GWAS</span>
+      <span class="tag">Population Genetics</span>
+      <span class="tag">Infectious Disease</span>
+      <span class="tag">Translational Research</span>
+      <span class="tag">One Health</span>
+      <span class="tag">Cloud HPC</span>
     </div>
-
-    <div class="hero-photo reveal">
-      <img id="heroPhoto" src="photo-hero.png" alt="Dr. Adeola Ayoola" onerror="this.style.display='none'; document.getElementById('heroFallback').style.display='grid';" />
-      <div class="photo-fallback" id="heroFallback" style="display: none;">
-        <div>
-          <div class="init">Aa</div>
-          <div class="fb-label">Adeola Ayoola</div>
-        </div>
-      </div>
-      <div class="hero-badge">
-        <span class="dot"></span>
-        <div class="badge-text"><b>Currently open to research collaborations</b></div>
-      </div>
+    <div class="hero-cta">
+      <a href="#research" class="btn-primary">Explore Research</a>
+      <a href="#contact" class="btn-secondary">Get in Touch</a>
     </div>
   </div>
-</section>
+  <div class="hero-stats fade-in">
+    <div class="stat-card">
+      <div class="stat-num">8+</div>
+      <div class="stat-label">Years in computational &amp; laboratory genomics</div>
+      <div class="stat-sub">Across US, China &amp; West Africa</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-num">28+</div>
+      <div class="stat-label">Peer-reviewed publications</div>
+      <div class="stat-sub">9 as first or corresponding author</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-num">$162K</div>
+      <div class="stat-label">Extramural funding secured</div>
+      <div class="stat-sub">PI &amp; co-PI on competitive grants</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-num">1,200+</div>
+      <div class="stat-label">Samples in production pipelines</div>
+      <div class="stat-sub">UCLA · Duke · multi-site</div>
+    </div>
+  </div>
+</div>
 
 <!-- ============ ABOUT ============ -->
 <section class="about" id="about">
@@ -1078,153 +1113,165 @@
       </div>
       <div class="about-text reveal">
         <p>
-          Seven-plus years building genomic pipelines that turn raw sequencing into research- and
-          clinical-grade data. I'm currently a Project Scientist in the Department of Human Genetics
-          at UCLA, running variant-calling, QC, and population-structure pipelines on cohorts of
-          1,200+ samples. My path runs through a PhD in Genetics at the Chinese Academy of Sciences
-          and a postdoctoral fellowship at Duke University. In production environments, I've cut
-          analytical error rates by 25% and lifted pipeline throughput by 40%.
-        </p>
-        <p>
-          My toolkit includes GATK, ANGSD, PLINK, ADMIXTURE, and Snakemake on SLURM, AWS, and Google
-          Cloud, paired with SOP design and regulatory-aligned documentation. I've published in
-          <em>Molecular Biology and Evolution</em>, <em>Scientific Reports</em>, and
-          <em>Frontiers in Genetics</em>, with grant support from the National Geographic Society,
-          the Fonseca Species Conservation Fund, and the Rufford Foundation. I work fluently across
-          academic research programs and industry teams in biotech and clinical genomics.
-        </p>
+          <p>I am a <strong>Computational Genomics and Population Genetics Scientist</strong> with a Ph.D. in Genetics and more than 8 years of end-to-end experience building NGS pipelines, multi-omics frameworks, and AI/ML-driven analytical systems across academic medicine, international research institutes, and public health programs in the US, China, and West Africa.</p>
+        <p>My technical core is <strong>production-grade genomic data science</strong>. I design and deploy reproducible NGS pipelines — from DNA extraction and sequencing through variant calling (GATK, ANGSD, BCFtools), VCF curation, LD pruning, PCA, and population structure analysis — on HPC systems (SLURM/Duke Computing Cluster/Hoffman2) and cloud platforms (AWS, Google Cloud). I work in R and Python daily, building scalable workflows that have processed population-scale datasets across hundreds to thousands of samples with rigorous QC and reproducibility standards.</p>
+        <p>Few computational genomics scientists have spent equal time at the bench, in the field, and inside HPC pipelines. That cross-layer fluency — from biological sample to population-scale inference, is what I bring to every team I work with.</p>
+        <p>I integrate <strong>machine learning-based genomic selection scans</strong>, ecological modeling, and multi-omics data, spanning whole-genome, transcriptomic, and epigenomic layers, to generate mechanistic insights that connect molecular variation to disease outcomes. My work in host-pathogen genomics and infectious disease, particularly in NHP and human populations under malaria and SIV pressure, sits directly at the intersection of population genetics and translational research, the same scientific questions driving infectious disease, immunogenomics, and precision medicine today.</p>
+        <p>I have secured <strong>$161,976 in extramural funding</strong> as PI and co-PI, published 28 peer-reviewed papers including 9 as first or corresponding author, and led research teams across three continents. I bring the independent scientific judgment of a funded PI with the pipeline engineering fluency — Snakemake, GATK, cloud HPC, production-scale R and Python, that teams can put to work immediately.</p>
+        <p>With particular interest in <strong>infectious disease genomics, population genetics, and translational multi-omics</strong>, I welcome collaborations and conversations at the intersection of computational biology, bioinformatics, and real-world biological impact.</p>
       </div>
     </div>
 
-    <div class="about-footnotes reveal">
-      <div>
-        <div class="foot-k">7+ yrs</div>
-        <div class="foot-l">In computational and laboratory genomics</div>
-      </div>
-      <div>
-        <div class="foot-k">28+</div>
-        <div class="foot-l">Peer-reviewed publications and manuscripts</div>
-      </div>
-      <div>
-        <div class="foot-k">1,200+</div>
-        <div class="foot-l">Samples in production pipelines</div>
+   </div>
+      <div class="about-sidebar">
+        <div class="info-card">
+          <h4>Current Position</h4>
+          <div class="info-item"><div class="info-dot"></div>Project Scientist, Human Genetics</div>
+          <div class="info-item"><div class="info-dot"></div>UCLA David Geffen School of Medicine</div>
+          <div class="info-item"><div class="info-dot"></div>Los Angeles, CA (remote-eligible)</div>
+        </div>
+        <div class="info-card">
+          <h4>Education</h4>
+          <div class="info-item"><div class="info-dot"></div>Ph.D. Genetics · Chinese Academy of Sciences</div>
+          <div class="info-item"><div class="info-dot"></div>Postdoc · Duke University</div>
+          <div class="info-item"><div class="info-dot"></div>Visiting Scholar · University of Houston</div>
+        </div>
+        <div class="info-card">
+          <h4>Status &amp; Availability</h4>
+          <div class="info-item"><div class="info-dot"></div>US Permanent Resident (Green Card)</div>
+          <div class="info-item"><div class="info-dot"></div>No sponsorship required</div>
+          <div class="info-item"><div class="info-dot"></div>Open to industry, federal &amp; academic roles</div>
+          <div class="info-item"><div class="info-dot"></div>RTP · Boston · Bay Area · Remote</div>
+        </div>
+        <div class="info-card">
+          <h4>Languages</h4>
+          <div class="info-item"><div class="info-dot"></div>English (fluent)</div>
+          <div class="info-item"><div class="info-dot"></div>Yoruba (native)</div>
+          <div class="info-item"><div class="info-dot"></div>Chinese (conversational)</div>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ============ RESEARCH PILLARS ============ -->
+<!-- RESEARCH -->
 <section id="research">
-  <div class="container">
-    <div class="section-head">
-      <div>
-        <span class="eyebrow reveal">Research</span>
-        <h2 class="reveal">Research areas</h2>
-      </div>
-      <p class="reveal">
-        I work across three areas: population genomics, eDNA-based biodiversity and disease surveillance,
-        and ecological modeling. The methods carry across human cohorts, primate populations, and field
-        environments.
-      </p>
-    </div>
-
-    <div class="pillars-grid">
-      <div class="pillar reveal">
-        <div class="num">01</div>
-        <h3>Population genomics and adaptation</h3>
-        <p>
-          Whole-genome sequencing, demographic modeling, selection scans, and admixture inference applied to
-          human and non-human populations across African landscapes, including signatures of malaria
-          resistance and pigmentation variation along environmental gradients.
-        </p>
-        <div class="tags">
-          <span>WGS / WES</span><span>GATK</span><span>ADMIXTURE</span><span>PCAngsd</span><span>BEAST</span>
+  <div class="section-inner">
+    <div class="section-label">Research</div>
+    <h2 class="section-title">Three integrated research programs</h2>
+    <p class="section-sub">Each program combines in vivo NHP research, in vitro systems, in silico computational approaches, and environmental NAMs — producing the mechanistic rigor and translational breadth relevant to biopharma, federal biomedical research, and academic medicine.</p>
+    <div class="research-grid fade-in">
+      <div class="research-card">
+        <div class="research-num">01</div>
+        <h3>Computational Genomics &amp; Population Genetics</h3>
+        <p>Whole-genome sequencing, demographic modeling, selection scans, and admixture inference applied to human and nonhuman primate populations across African landscapes — including signatures of malaria resistance, immune adaptation, and pigmentation variation along environmental gradients.</p>
+        <div class="tool-chips">
+          <span class="chip">WGS/WES</span><span class="chip">GATK</span><span class="chip">ANGSD</span>
+          <span class="chip">ADMIXTURE</span><span class="chip">PCAngsd</span><span class="chip">BEAST</span>
+          <span class="chip">PLINK</span><span class="chip">GWAS</span>
         </div>
+        <div class="industry-note">Directly applicable to population-scale genomics programs in biopharma, precision medicine, and NIH-funded translational research.</div>
       </div>
-      <div class="pillar reveal">
-        <div class="num">02</div>
-        <h3>eDNA, iDNA and biomolecular surveillance</h3>
-        <p>
-          Non-invasive environmental and invertebrate DNA methods for biodiversity inference and disease
-          surveillance, including Oxford Nanopore field sequencing deployed in UNESCO forests and
-          zoonotic-risk landscapes.
-        </p>
-        <div class="tags">
-          <span>eDNA / iDNA</span><span>Nanopore</span><span>Metabarcoding</span><span>One Health</span>
+      <div class="research-card">
+        <div class="research-num">02</div>
+        <h3>Infectious Disease Genomics &amp; Pathogen Surveillance</h3>
+        <p>Host-pathogen genomics, zoonotic disease dynamics, and noninvasive eDNA/iDNA surveillance methods — including Oxford Nanopore field sequencing deployed in zoonotic-risk landscapes. Investigations of malaria, SIV, and co-infection dynamics in NHP and human populations.</p>
+        <div class="tool-chips">
+          <span class="chip">eDNA/iDNA</span><span class="chip">Nanopore</span><span class="chip">Metagenomics</span>
+          <span class="chip">One Health</span><span class="chip">Host-Pathogen</span>
         </div>
+        <div class="industry-note">Applicable to biosurveillance, infectious disease drug target validation, and environmental monitoring programs in biotech and federal agencies.</div>
       </div>
-      <div class="pillar reveal">
-        <div class="num">03</div>
-        <h3>Human and environmental modeling</h3>
-        <p>
-          Species distribution and ecological niche modeling to reconstruct how climate change, habitat
-          fragmentation, and land-use transformation shape biological diversity and public-health outcomes
-          at the landscape scale.
-        </p>
-        <div class="tags">
-          <span>MaxEnt</span><span>ArcGIS</span><span>QGIS</span><span>Niche modeling</span>
+      <div class="research-card">
+        <div class="research-num">03</div>
+        <h3>Translational Genomics, Multi-Omics &amp; AI/ML</h3>
+        <p>Integration of machine learning-based genomic selection scans, multi-omics frameworks (whole-genome, transcriptomic, epigenomic), and ecological modeling to generate mechanistic insights connecting molecular variation to disease outcomes at population and systems scale.</p>
+        <div class="tool-chips">
+          <span class="chip">ML/AI</span><span class="chip">DeepVariant</span><span class="chip">Snakemake</span>
+          <span class="chip">Multi-Omics</span><span class="chip">R/Python</span><span class="chip">AWS</span>
         </div>
+        <div class="industry-note">Aligned with AI-driven variant analysis, biomarker discovery, and precision medicine pipeline programs in clinical genomics and biopharma R&amp;D.</div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ============ EXPERTISE ============ -->
-<section class="expertise">
-  <div class="container">
-    <div class="section-head">
-      <div>
-        <span class="eyebrow reveal">Skills</span>
-        <h2 class="reveal">Skills and expertise</h2>
-      </div>
-      <p class="reveal">
-        Seven-plus years of training across wet-lab, computational, and field-based research, in
-        laboratories in China, Germany, Côte d'Ivoire, and the United States.
-      </p>
-    </div>
-
-    <div class="exp-grid reveal">
-      <div class="exp-cell">
-        <h3>Genomics and NGS</h3>
-        <div class="exp-sub">Sequencing · Variant calling · QC</div>
+<!-- SKILLS -->
+<section>
+  <div class="section-inner">
+    <div class="section-label">Technical Expertise</div>
+    <h2 class="section-title">Skills &amp; toolkit</h2>
+    <p class="section-sub">Eight-plus years of training across wet-lab, computational, and field-based research — in laboratories in China, Nigeria, Côte d'Ivoire, Germany, and the United States.</p>
+    <div class="skills-grid fade-in">
+      <div class="skill-block">
+        <h3>Genomics &amp; NGS</h3>
+        <div class="skill-sub">Sequencing · Variant Calling · QC</div>
         <ul>
-          <li>Whole-genome and exome sequencing (WGS / WES)</li>
+          <li>WGS, WES, RNA-seq, ChIP-seq, ATAC-seq, long-read</li>
           <li>Variant calling: GATK, ANGSD, BCFtools, Samtools</li>
-          <li>QC pipelines: FastQC, MultiQC, Trimmomatic</li>
+          <li>QC: FastQC, MultiQC, Trimmomatic</li>
           <li>Wet-lab: DNA/RNA extraction, primer design, qPCR</li>
-          <li>Oxford Nanopore sequencing and real-time field ID</li>
+          <li>Oxford Nanopore sequencing, real-time field ID</li>
+          <li>ANNOVAR, Ensembl VEP, VCF analysis</li>
         </ul>
       </div>
-      <div class="exp-cell">
-        <h3>Population and statistical genetics</h3>
-        <div class="exp-sub">Structure · Diversity · Selection</div>
+      <div class="skill-block">
+        <h3>Population &amp; Statistical Genetics</h3>
+        <div class="skill-sub">Structure · Diversity · Selection</div>
         <ul>
-          <li>PLINK, ADMIXTURE, PCAngsd, STRUCTURE, BEAST</li>
-          <li>F<sub>ST</sub>, PCA, LD analysis, demographic inference</li>
-          <li>Selection scans on low-depth sequencing data</li>
+          <li>PLINK2, ADMIXTURE, PCAngsd, STRUCTURE, BEAST</li>
+          <li>FST, PCA, LD pruning, demographic inference</li>
+          <li>GWAS, REGENIE, SAIGE, polygenic risk scoring</li>
           <li>Genotype-likelihood frameworks (ANGSD)</li>
-          <li>GWAS and genotype modeling on clinical cohorts</li>
+          <li>Selection scans on low-depth sequencing data</li>
+          <li>Bayesian inference, mixed models</li>
         </ul>
       </div>
-      <div class="exp-cell">
-        <h3>Computing and workflow</h3>
-        <div class="exp-sub">HPC · Cloud · Automation</div>
+      <div class="skill-block">
+        <h3>AI/ML &amp; Genomic Inference</h3>
+        <div class="skill-sub">Machine Learning · Deep Learning · Prediction</div>
         <ul>
-          <li>R (Bioconductor, ggplot2) and Python (Pandas, NumPy)</li>
-          <li>Bash scripting, SQL, workflow automation</li>
-          <li>Snakemake NGS pipelines, 40% faster runtime</li>
-          <li>SLURM HPC (UCLA Hoffman2), AWS, Google Cloud</li>
-          <li>Machine learning for genomic selection scans</li>
+          <li>ML-based genomic selection scans</li>
+          <li>DeepVariant, AI-enabled variant analysis workflows</li>
+          <li>Python: Pandas, NumPy, scikit-learn</li>
+          <li>Predictive modeling for disease risk</li>
+          <li>Neural network applications in genomics</li>
+          <li>Feature engineering from multi-omics data</li>
         </ul>
       </div>
-      <div class="exp-cell">
-        <h3>Spatial, ecological and field science</h3>
-        <div class="exp-sub">GIS · Niche modeling · Fieldwork</div>
+      <div class="skill-block">
+        <h3>Pipeline Engineering &amp; Cloud</h3>
+        <div class="skill-sub">HPC · Cloud · Automation</div>
+        <ul>
+          <li>Nextflow, Snakemake, WDL/Cromwell</li>
+          <li>SLURM HPC: UCLA Hoffman2, Duke DCC</li>
+          <li>AWS (EC2, S3, Batch), Google Cloud, Terra.bio</li>
+          <li>Docker, version control (Git), SQL</li>
+          <li>R (Bioconductor, ggplot2) and Bash scripting</li>
+          <li>Database integration, ETL pipelines</li>
+        </ul>
+      </div>
+      <div class="skill-block">
+        <h3>Multi-Omics Integration</h3>
+        <div class="skill-sub">Whole-Genome · Transcriptomic · Epigenomic</div>
+        <ul>
+          <li>Whole-genome, transcriptomic, epigenomic data integration</li>
+          <li>Regulatory network analysis (miRNA, lncRNA, TF networks)</li>
+          <li>Host-pathogen multi-omics frameworks</li>
+          <li>Systems-level biological inference</li>
+          <li>Seurat, Scanpy (single-cell approaches)</li>
+          <li>ggplot2, Plotly, R Shiny, Jupyter data viz</li>
+        </ul>
+      </div>
+      <div class="skill-block">
+        <h3>Spatial, Ecological &amp; Field Science</h3>
+        <div class="skill-sub">GIS · Niche Modeling · Fieldwork</div>
         <ul>
           <li>MaxEnt v3.3.3k ecological niche modeling</li>
-          <li>ArcGIS and QGIS for habitat suitability mapping</li>
+          <li>ArcGIS, QGIS for habitat suitability mapping</li>
           <li>Climate-change scenario projection</li>
-          <li>8+ years of field operations across West Africa</li>
+          <li>8+ years field operations across West Africa</li>
+          <li>eDNA/iDNA sample collection and processing</li>
           <li>SOP design, chain-of-custody, IRB-aligned docs</li>
         </ul>
       </div>
@@ -1232,296 +1279,291 @@
   </div>
 </section>
 
-<!-- ============ PUBLICATIONS ============ -->
+<!-- PUBLICATIONS -->
 <section id="publications">
-  <div class="container">
-    <div class="section-head">
-      <div>
-        <span class="eyebrow reveal">Publications</span>
-        <h2 class="reveal">Selected publications</h2>
-      </div>
-      <p class="reveal">
-        Lead and co-author on papers in <em>Molecular Biology and Evolution</em>, <em>Scientific Reports</em>,
-        <em>Frontiers in Genetics</em>, and <em>Ecological Indicators</em>. The full publication list is on
-        <a href="https://scholar.google.com/citations?user=_vBiJnQAAAAJ&hl=en" target="_blank" rel="noopener" style="color: var(--forest); font-weight: 500; border-bottom: 1px solid var(--bronze);">Google Scholar</a>.
-      </p>
-    </div>
+  <div class="section-inner">
+    <div class="section-label">Publications</div>
+    <h2 class="section-title">Selected publications</h2>
+    <p class="section-sub">Lead and co-author on 28+ papers in <em>Molecular Biology and Evolution</em>, <em>Scientific Reports</em>, <em>Frontiers in Genetics</em>, <em>Ecological Indicators</em>, and more. Full list on <a href="https://scholar.google.com/citations?user=_vBiJnQAAAAJ&hl=en" style="color:var(--accent)">Google Scholar ↗</a>.</p>
+    <div class="pub-list fade-in">
 
-    <div class="pub-stats reveal">
-      <div class="stat-big">
-        <div class="k">28<sup>+</sup></div>
-        <div class="l">Peer-reviewed articles and manuscripts</div>
-      </div>
-      <div class="stat-big">
-        <div class="k">5</div>
-        <div class="l">Journals where I serve as peer reviewer</div>
-      </div>
-      <div class="stat-big">
-        <div class="k">1,200<sup>+</sup></div>
-        <div class="l">Samples processed in UCLA / Duke pipelines</div>
-      </div>
-      <div class="stat-big">
-        <div class="k">10<sup>+</sup></div>
-        <div class="l">African taxa in comparative genomics studies</div>
-      </div>
-    </div>
+      <div class="pub-divider">Computational Genomics &amp; Population Genetics</div>
 
-    <div class="pub-list reveal">
-      <article class="pub-item featured">
-        <div class="year">2020</div>
-        <div class="pub-main">
-          <span class="featured-tag">Featured</span>
-          <div class="pub-title">Population genomics reveals incipient speciation, introgression, and adaptation in the African Mona Monkey (<em>Cercopithecus mona</em>).</div>
-          <div class="pub-authors"><b>Ayoola AO</b>, et al.</div>
+      <div class="pub-item">
+        <div class="pub-year">2020</div>
+        <div class="pub-content">
+          <h4>Population genomics reveals incipient speciation, introgression, and adaptation in the African Mona Monkey (<em>Cercopithecus mona</em>)</h4>
+          <div class="pub-authors"><strong>Ayoola AO</strong>, Zhang B, Meisel RP, Nneji LM, Shao Y, et al.</div>
           <div class="pub-journal">Molecular Biology and Evolution</div>
+          <a href="https://doi.org/10.1093/molbev/msaa248" class="pub-link">DOI ↗</a>
         </div>
-        <a class="pub-ext" href="https://doi.org/10.1093/molbev/msaa248" target="_blank" rel="noopener">Read on MBE ↗</a>
-      </article>
-      <article class="pub-item">
-        <div class="year">2025</div>
-        <div class="pub-main">
-          <div class="pub-title">Morphology, DNA barcoding and range extension of a poorly known freshwater stingray <em>Fontitrygon garouaensis</em> from Nigerian inland water.</div>
-          <div class="pub-authors">Oladipo SO, Everett A, … <b>Ayoola AO</b>, …, Nneji LM.</div>
-          <div class="pub-journal">Integrative and Comparative Biology</div>
+        <span class="pub-badge badge-featured">Featured · First Author</span>
+      </div>
+
+      <div class="pub-item">
+        <div class="pub-year">2022</div>
+        <div class="pub-content">
+          <h4>African Suid Genomes Provide Insights into Local Adaptation to Diverse African Environments</h4>
+          <div class="pub-authors">Hai-Bing X, Chen Y, Adeniyi AC, …, <strong>Ayoola AO</strong>, …, Zhang Y-P.</div>
+          <div class="pub-journal">Molecular Biology and Evolution</div>
+          <a href="https://doi.org/10.1093/molbev/msac2561" class="pub-link">DOI ↗</a>
         </div>
-        <a class="pub-ext" href="https://doi.org/10.1093/icb/icaf125" target="_blank" rel="noopener">DOI ↗</a>
-      </article>
-      <article class="pub-item">
-        <div class="year">2025</div>
-        <div class="pub-main">
-          <div class="pub-title">Genetic diversity of <em>Plasmodium falciparum</em> in people living with HIV in Ogbomoso, Nigeria: implications for malaria transmission and treatment.</div>
-          <div class="pub-authors">Odesola DE, …, <b>Ayoola AO</b>, Opaleye OO, Ojurongbe O.</div>
-          <div class="pub-journal">MalariaWorld Journal</div>
+        <span class="pub-badge badge-comp">Comp. Genomics</span>
+      </div>
+
+      <div class="pub-item">
+        <div class="pub-year">2019</div>
+        <div class="pub-content">
+          <h4>Genomic and phenotypic analyses reveal mechanisms underlying homing ability in pigeon</h4>
+          <div class="pub-authors">Shao Y, Tian H-U, …, <strong>Ayoola AO</strong>, …, Wu D-D.</div>
+          <div class="pub-journal">Molecular Biology and Evolution</div>
+          <a href="https://academic.oup.com/mbe/article/37/1/134/5566491" class="pub-link">DOI ↗</a>
         </div>
-        <a class="pub-ext" href="https://doi.org/10.5281/zenodo.15175103" target="_blank" rel="noopener">DOI ↗</a>
-      </article>
-      <article class="pub-item">
-        <div class="year">2024</div>
-        <div class="pub-main">
-          <div class="pub-title">The role of falciparum chloroquine resistance transporter gene in malaria drug resistance and its implication on malaria control in Africa.</div>
-          <div class="pub-authors">Ige AA, Adedokun TT, Otutu O, Olorunfemi AB, <b>Ayoola AO</b>, Ojurongbe O.</div>
-          <div class="pub-journal">Pan African Journal of Life Sciences</div>
-        </div>
-        <a class="pub-ext" href="https://doi.org/10.36108/pajols/4202/80.0270" target="_blank" rel="noopener">DOI ↗</a>
-      </article>
-      <article class="pub-item">
-        <div class="year">2023</div>
-        <div class="pub-main">
-          <div class="pub-title">Population structure and evolutionary history of the greater cane rat (<em>Thryonomys swinderianus</em>) from the Guinean Forests of West Africa.</div>
-          <div class="pub-authors">Babarinde IA, Adeola AC, …, <b>Ayoola AO</b>, …, Murphy RW.</div>
+        <span class="pub-badge badge-comp">Comp. Genomics</span>
+      </div>
+
+      <div class="pub-item">
+        <div class="pub-year">2023</div>
+        <div class="pub-content">
+          <h4>Population structure and evolutionary history of the greater cane rat (<em>Thryonomys swinderianus</em>) from the Guinean Forests of West Africa</h4>
+          <div class="pub-authors">Babarinde IA, Adeola AC, …, <strong>Ayoola AO</strong>, …, Murphy RW.</div>
           <div class="pub-journal">Frontiers in Genetics</div>
+          <a href="https://doi.org/10.3389/fgene.2023.1041103" class="pub-link">DOI ↗</a>
         </div>
-        <a class="pub-ext" href="https://doi.org/10.3389/fgene.2023.1041103" target="_blank" rel="noopener">DOI ↗</a>
-      </article>
-      <article class="pub-item">
-        <div class="year">2023</div>
-        <div class="pub-main">
-          <div class="pub-title">Hunting of primates in the tropics: drivers, unsustainability, and ecological and socio-economic consequences.</div>
-          <div class="pub-authors">Koné I, Refisch J, Jost Robinson CA, <b>Ayoola AO</b>.</div>
-          <div class="pub-journal">Primates in Anthropogenic Landscapes, Springer</div>
-        </div>
-        <a class="pub-ext" href="https://doi.org/10.1007/978-3-031-11736-7_4" target="_blank" rel="noopener">DOI ↗</a>
-      </article>
-      <article class="pub-item">
-        <div class="year">2022</div>
-        <div class="pub-main">
-          <div class="pub-title">African suid genomes provide insights into local adaptation to diverse African environments.</div>
-          <div class="pub-authors">Hai-Bing X, Chen Y, Adeniyi AC, …, <b>Ayoola AO</b>, …, Zhang Y-P.</div>
-          <div class="pub-journal">Molecular Biology and Evolution</div>
-        </div>
-        <a class="pub-ext" href="https://doi.org/10.1093/molbev/msac2561" target="_blank" rel="noopener">DOI ↗</a>
-      </article>
-      <article class="pub-item">
-        <div class="year">2021</div>
-        <div class="pub-main">
-          <div class="pub-title">Impact of climate change on the spatial distribution of endemic legume species of the Guineo-Congolian forest, Africa.</div>
-          <div class="pub-authors">Oyebanji OO, Salako G, Nneji LM, …, <b>Ayoola AO</b>, Olagunju TE, Ighodalo DJ, Nneji IC.</div>
-          <div class="pub-journal">Ecological Indicators</div>
-        </div>
-        <a class="pub-ext" href="https://doi.org/10.1016/j.ecolind.2020.107282" target="_blank" rel="noopener">DOI ↗</a>
-      </article>
-      <article class="pub-item">
-        <div class="year">2020</div>
-        <div class="pub-main">
-          <div class="pub-title">DNA barcoding of silver butter catfish (<em>Schilbe intermedius</em>) reveals patterns of mitochondrial genetic diversity across African river systems.</div>
-          <div class="pub-authors">Nneji LM, Adeola AC, …, <b>Ayoola AO</b>, Okeyoyin AO, et al.</div>
+        <span class="pub-badge badge-comp">Pop. Genetics</span>
+      </div>
+
+      <div class="pub-item">
+        <div class="pub-year">2021</div>
+        <div class="pub-content">
+          <h4>Regulatory network of miRNA, lncRNA, transcription factor and target immune response genes in bovine mastitis</h4>
+          <div class="pub-authors">Tucker AR, Salazar NA, <strong>Ayoola AO</strong>, Memili E, Thomas BN, Morenikeji OB.</div>
           <div class="pub-journal">Scientific Reports</div>
         </div>
-        <a class="pub-ext" href="https://doi.org/10.1038/s41598-020-64126-y" target="_blank" rel="noopener">DOI ↗</a>
-      </article>
-      <article class="pub-item">
-        <div class="year">2019</div>
-        <div class="pub-main">
-          <div class="pub-title">Genomic and phenotypic analyses reveal mechanisms underlying homing ability in pigeon.</div>
-          <div class="pub-authors">Shao Y, Tian H-U, …, <b>Ayoola AO</b>, …, Wu D-D.</div>
-          <div class="pub-journal">Molecular Biology and Evolution</div>
-        </div>
-        <a class="pub-ext" href="https://academic.oup.com/mbe/article/37/1/134/5566491" target="_blank" rel="noopener">DOI ↗</a>
-      </article>
-    </div>
+        <span class="pub-badge badge-comp">Multi-Omics</span>
+      </div>
 
-  </div>
-</section>
+      <div class="pub-divider">Infectious Disease &amp; Translational Research</div>
 
-<!-- ============ GRANTS ============ -->
-<section class="grants">
-  <div class="container">
-    <div class="section-head">
-      <div>
-        <span class="eyebrow reveal">Funding</span>
-        <h2 class="reveal">Grants and funding</h2>
+      <div class="pub-item">
+        <div class="pub-year">2025</div>
+        <div class="pub-content">
+          <h4>Genetic diversity of <em>Plasmodium falciparum</em> in people living with HIV in Ogbomoso, Nigeria: implications for malaria transmission and treatment</h4>
+          <div class="pub-authors">Odesola DE, …, <strong>Ayoola AO</strong>, Opaleye OO, Ojurongbe O.</div>
+          <div class="pub-journal">MalariaWorld Journal</div>
+          <a href="https://doi.org/10.5281/zenodo.15175103" class="pub-link">DOI ↗</a>
+        </div>
+        <span class="pub-badge badge-disease">Infect. Disease</span>
       </div>
-      <p class="reveal">
-        Principal investigator and co-applicant on grants from the National Geographic Society, Fonseca
-        Species Conservation Fund, and the Rufford Foundation.
-      </p>
-    </div>
 
-    <div class="grants-grid">
-      <div class="grant-card reveal">
-        <div class="g-amount">$149,996</div>
-        <div class="g-funder">National Geographic Society</div>
-        <div class="g-desc">
-          Developing a multidisciplinary approach toward sustainable conservation of the threatened
-          Nigerian–Cameroon Highlands.
+      <div class="pub-item">
+        <div class="pub-year">2024</div>
+        <div class="pub-content">
+          <h4>The role of falciparum chloroquine resistance transporter gene in malaria drug resistance and its implication on malaria control in Africa</h4>
+          <div class="pub-authors">Ige AA, Adedokun TT, Otutu O, Olorunfemi AB, <strong>Ayoola AO</strong>, Ojurongbe O.</div>
+          <div class="pub-journal">Pan African Journal of Life Sciences</div>
+          <a href="https://doi.org/10.36108/pajols/4202/80.0270" class="pub-link">DOI ↗</a>
         </div>
-        <div class="g-meta"><span>Co-applicant</span><span>2023</span></div>
+        <span class="pub-badge badge-disease">Drug Resistance</span>
       </div>
-      <div class="grant-card reveal">
-        <div class="g-amount">$6,000</div>
-        <div class="g-funder">Fonseca Species Conservation Fund</div>
-        <div class="g-desc">
-          Zoonotic disease outbreak awareness and enhancing conservation of endangered Nigerian guenons
-          through ecological research and community engagement.
+
+      <div class="pub-divider">Ecology &amp; Conservation Biology</div>
+
+      <div class="pub-item">
+        <div class="pub-year">2021</div>
+        <div class="pub-content">
+          <h4>Impact of climate change on the spatial distribution of endemic legume species of the Guineo-Congolian forest, Africa</h4>
+          <div class="pub-authors">Oyebanji OO, Salako G, Nneji LM, …, <strong>Ayoola AO</strong>, et al.</div>
+          <div class="pub-journal">Ecological Indicators</div>
+          <a href="https://doi.org/10.1016/j.ecolind.2020.107282" class="pub-link">DOI ↗</a>
         </div>
-        <div class="g-meta"><span>Principal investigator</span><span>2024</span></div>
+        <span class="pub-badge badge-eco">Ecology</span>
       </div>
-      <div class="grant-card reveal">
-        <div class="g-amount">$5,980</div>
-        <div class="g-funder">Rufford Small Grant</div>
-        <div class="g-desc">
-          Population survey and conservation action for the vulnerable red-eared guenon in Nigeria.
+
+      <div class="pub-item">
+        <div class="pub-year">2023</div>
+        <div class="pub-content">
+          <h4>Hunting of primates in the tropics: drivers, unsustainability, and ecological and socio-economic consequences</h4>
+          <div class="pub-authors">Koné I, Refisch J, Jost Robinson CA, <strong>Ayoola AO</strong>.</div>
+          <div class="pub-journal">Primates in Anthropogenic Landscapes, Springer</div>
+          <a href="https://doi.org/10.1007/978-3-031-11736-7_4" class="pub-link">DOI ↗</a>
         </div>
-        <div class="g-meta"><span>Principal investigator</span><span>2024</span></div>
+        <span class="pub-badge badge-eco">Book Chapter</span>
       </div>
+
     </div>
   </div>
 </section>
 
-<!-- ============ SPEAKING ============ -->
-<section id="speaking">
-  <div class="container">
-    <div class="section-head">
-      <div>
-        <span class="eyebrow reveal">Talks</span>
-        <h2 class="reveal">Talks and conferences</h2>
+<!-- GRANTS -->
+<section id="grants">
+  <div class="section-inner">
+    <div class="section-label">Funding</div>
+    <h2 class="section-title">Grants &amp; extramural funding</h2>
+    <p class="section-sub">Principal investigator and co-applicant on $161,976 in competitive extramural funding from the National Geographic Society, Fonseca Species Conservation Fund, and the Rufford Foundation.</p>
+    <div class="grants-grid fade-in">
+      <div class="grant-card">
+        <div class="grant-amount">$149,996</div>
+        <div class="grant-agency">National Geographic Society</div>
+        <div class="grant-title">Developing a multidisciplinary approach toward sustainable conservation of the threatened Nigerian-Cameroon Highlands</div>
+        <div class="grant-note">Developed multi-omics and ecological modeling frameworks for threatened NHP populations — generating translational data on host-pathogen dynamics relevant to infectious disease and immunogenomics research.</div>
+        <div class="grant-meta"><span>Co-Applicant</span><span>2023</span></div>
       </div>
-      <p class="reveal">
-        Selected platform presentations and invited talks at the Society for Molecular Biology and
-        Evolution, the International Primatological Society, and the African Primatological Society
-        Congress, among others.
-      </p>
-    </div>
-
-    <div class="talks">
-      <article class="talk-card reveal">
-        <span class="t-year">2025</span><span class="t-type">Oral</span>
-        <div class="t-title">Genetic variation, adaptation, and conservation of guenons across multiple natural environments.</div>
-        <div class="t-venue">International Primatological Society Meeting · Madagascar</div>
-      </article>
-      <article class="talk-card reveal">
-        <span class="t-year">2024</span><span class="t-type">Oral · SMBE</span>
-        <div class="t-title">Genetic variation, adaptation, and conservation genomics of guenons.</div>
-        <div class="t-venue">Society for Molecular Biology and Evolution · Puerto Vallarta, Mexico</div>
-      </article>
-      <article class="talk-card reveal">
-        <span class="t-year">2024</span><span class="t-type">Platform</span>
-        <div class="t-title">Current conservation status and extinction risk of Nigerian guenons.</div>
-        <div class="t-venue">American Society of Primatologists Annual Conference · Quintana Roo, Mexico</div>
-      </article>
-      <article class="talk-card reveal">
-        <span class="t-year">2024</span><span class="t-type">Platform</span>
-        <div class="t-title">Climate-driven ecological niche alteration and extinction risk in Nigerian guenons.</div>
-        <div class="t-venue">3rd African Primatological Society Congress · Potchefstroom, South Africa</div>
-      </article>
-      <article class="talk-card reveal">
-        <span class="t-year">2023</span><span class="t-type">Invited</span>
-        <div class="t-title">Beyond Biodiversity Conservation: Care.</div>
-        <div class="t-venue">Duke Biodiversity Conservation Symposium · Durham, NC</div>
-      </article>
-      <article class="talk-card reveal">
-        <span class="t-year">2023</span><span class="t-type">Oral</span>
-        <div class="t-title">Pathogen genetic and ecological diversity in Nigerian primates.</div>
-        <div class="t-venue">Carolina Malaria Research Annual Symposium · RTP, NC</div>
-      </article>
+      <div class="grant-card">
+        <div class="grant-amount">$6,000</div>
+        <div class="grant-agency">Fonseca Species Conservation Fund</div>
+        <div class="grant-title">Zoonotic disease outbreak awareness and enhancing conservation of endangered Nigerian guenons through ecological research and community engagement</div>
+        <div class="grant-note">Integrated genomic surveillance and community health data to model zoonotic spillover risk — methodology applicable to biosurveillance and One Health infectious disease programs.</div>
+        <div class="grant-meta"><span>Principal Investigator</span><span>2024</span></div>
+      </div>
+      <div class="grant-card">
+        <div class="grant-amount">$5,980</div>
+        <div class="grant-agency">Rufford Small Grant</div>
+        <div class="grant-title">Population survey and conservation action for the vulnerable red-eared guenon in Nigeria</div>
+        <div class="grant-note">Combined WGS population genomics with field ecological survey data to assess adaptive capacity and conservation risk — translatable to population-scale biomedical genomics program design.</div>
+        <div class="grant-meta"><span>Principal Investigator</span><span>2024</span></div>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- ============ NEWS ============ -->
-<section class="news" id="news">
-  <div class="container">
-    <div class="section-head">
-      <div>
-        <span class="eyebrow reveal">Press</span>
-        <h2 class="reveal">In the news</h2>
+<!-- TALKS -->
+<section id="talks">
+  <div class="section-inner">
+    <div class="section-label">Talks &amp; Conferences</div>
+    <h2 class="section-title">Selected presentations</h2>
+    <p class="section-sub">Platform presentations and invited talks at SMBE, the International Primatological Society, the African Primatological Society Congress, the American Society of Primatologists, and the Carolina Malaria Research Annual Symposium.</p>
+    <div class="talks-list fade-in">
+      <div class="talk-item">
+        <div class="talk-year-badge"><span class="talk-year">2025</span><span class="talk-type">Oral</span></div>
+        <div>
+          <h4>Genetic variation, adaptation, and conservation of guenons across multiple natural environments</h4>
+          <div class="talk-venue">International Primatological Society Meeting · Madagascar</div>
+          <div class="talk-methods">Methods: WGS, selection scans, ADMIXTURE, ecological niche modeling across environmental gradients</div>
+        </div>
       </div>
-      <p class="reveal">
-        Press coverage of awards and honors, including features in Nigerian national outlets and alumni
-        publications.
-      </p>
+      <div class="talk-item">
+        <div class="talk-year-badge"><span class="talk-year">2024</span><span class="talk-type">Oral · SMBE</span></div>
+        <div>
+          <h4>Genetic variation, adaptation, and conservation genomics of guenons</h4>
+          <div class="talk-venue">Society for Molecular Biology and Evolution · Puerto Vallarta, Mexico</div>
+          <div class="talk-methods">Methods: Population genomics, selection scans, GWAS-ready data integration, multi-environment adaptation modeling</div>
+        </div>
+      </div>
+      <div class="talk-item">
+        <div class="talk-year-badge"><span class="talk-year">2024</span><span class="talk-type">Platform</span></div>
+        <div>
+          <h4>Current conservation status and extinction risk of Nigerian guenons</h4>
+          <div class="talk-venue">American Society of Primatologists Annual Conference · Quintana Roo, Mexico</div>
+          <div class="talk-methods">Methods: MaxEnt niche modeling, species distribution modeling, climate scenario analysis</div>
+        </div>
+      </div>
+      <div class="talk-item">
+        <div class="talk-year-badge"><span class="talk-year">2024</span><span class="talk-type">Platform</span></div>
+        <div>
+          <h4>Climate-driven ecological niche alteration and extinction risk in Nigerian guenons</h4>
+          <div class="talk-venue">3rd African Primatological Society Congress · Potchefstroom, South Africa</div>
+          <div class="talk-methods">Methods: WGS, climate-change scenario projection, spatial distribution modeling, ArcGIS</div>
+        </div>
+      </div>
+      <div class="talk-item">
+        <div class="talk-year-badge"><span class="talk-year">2023</span><span class="talk-type">Invited</span></div>
+        <div>
+          <h4>Beyond Biodiversity Conservation: Care</h4>
+          <div class="talk-venue">Duke Biodiversity Conservation Symposium · Durham, NC</div>
+          <div class="talk-methods">Invited lecture on integrating One Health frameworks with conservation biology and translational science</div>
+        </div>
+      </div>
+      <div class="talk-item">
+        <div class="talk-year-badge"><span class="talk-year">2023</span><span class="talk-type">Oral</span></div>
+        <div>
+          <h4>Pathogen genetic and ecological diversity in Nigerian primates</h4>
+          <div class="talk-venue">Carolina Malaria Research Annual Symposium (CaMRAS) · RTP, NC</div>
+          <div class="talk-methods">Methods: Host-pathogen genomics, eDNA surveillance, infectious disease population genomics</div>
+        </div>
+      </div>
     </div>
 
-    <div class="news-grid">
-      <a class="news-card reveal" href="https://www.positivenaija.com/adeola-oluwakemi-ayoola-awarded-2019-excellent-international-student-in-china/" target="_blank" rel="noopener">
-        <div class="n-source">Positive Naija</div>
-        <div class="n-headline">Adeola Ayoola Awarded 2019 Excellent International Student in China.</div>
-        <div class="n-footer">
-          <span>Feature</span>
-          <span class="n-read">Read ↗</span>
-        </div>
-      </a>
-      <a class="news-card reveal" href="https://thenationonlineng.net/futa-alumna-wins-award-in-china/" target="_blank" rel="noopener">
-        <div class="n-source">The Nation</div>
-        <div class="n-headline">FUTA alumna wins award in China.</div>
-        <div class="n-footer">
-          <span>National press</span>
-          <span class="n-read">Read ↗</span>
-        </div>
-      </a>
-      <a class="news-card reveal" href="https://www.facebook.com/futacommunity/posts/futa-alumna-is-the-best-african-female-postgraduate-student-in-china-ayoola-adeo/2530529746967585/" target="_blank" rel="noopener">
-        <div class="n-source">FUTA Community</div>
-        <div class="n-headline">FUTA alumna is the best African female postgraduate student in China.</div>
-        <div class="n-footer">
-          <span>Alumni feature</span>
-          <span class="n-read">Read ↗</span>
-        </div>
-      </a>
-      <a class="news-card reveal" href="https://www.facebook.com/share/p/1JTTRpnNTq/" target="_blank" rel="noopener">
-        <div class="n-source">Community Post</div>
-        <div class="n-headline">Celebratory posting on academic milestone and research impact.</div>
-        <div class="n-footer">
-          <span>Social feature</span>
-          <span class="n-read">Read ↗</span>
-        </div>
-      </a>
-      <a class="news-card reveal" href="https://nicholas.duke.edu/sites/default/files/documents/biodiv_cons_symposium_pamphlet.pdf" target="_blank" rel="noopener">
-        <div class="n-source">Duke Nicholas School</div>
-        <div class="n-headline">Duke Biodiversity Conservation Symposium, invited speaker and organizer.</div>
-        <div class="n-footer">
-          <span>Symposium</span>
-          <span class="n-read">Read ↗</span>
-        </div>
-      </a>
-      <a class="news-card reveal" href="https://medschool.ucla.edu/people/adeola-ayoola-phd" target="_blank" rel="noopener">
-        <div class="n-source">UCLA Medicine</div>
-        <div class="n-headline">Faculty profile · Department of Human Genetics, David Geffen School of Medicine.</div>
-        <div class="n-footer">
-          <span>Institutional profile</span>
-          <span class="n-read">Visit ↗</span>
-        </div>
-      </a>
+    <!-- IPS MADAGASCAR PHOTO GALLERY -->
+    <div class="gallery-label">From the field · IPS Madagascar 2025</div>
+    <div class="photo-strip fade-in">
+      <div class="photo-main photo-cell" onclick="openLightbox(this)">
+        <img src="IMG-20250724-WA0007.jpg" alt="Presenting Targeted Genome Recovery at IPS Madagascar 2025" loading="lazy" />
+        <div class="photo-overlay"><div class="photo-overlay-text">At the podium · 30th IPS Congress · Madagascar</div></div>
+      </div>
+      <div class="photo-sm photo-cell" onclick="openLightbox(this)">
+        <img src="IMG-20250724-WA0003.jpg" alt="IPS Madagascar methods slide — NGS pipeline" loading="lazy" />
+        <div class="photo-overlay"><div class="photo-overlay-text">Methods: fecal DNA → NGS pipeline → VCF</div></div>
+      </div>
+      <div class="photo-sm photo-cell" onclick="openLightbox(this)">
+        <img src="IMG-20250724-WA0019.jpg" alt="Presenting at IPS 30th Congress Madagascar" loading="lazy" />
+        <div class="photo-overlay"><div class="photo-overlay-text">Targeted Genome Recovery from Fecal Samples</div></div>
+      </div>
+      <div class="photo-sm photo-cell" onclick="openLightbox(this)">
+        <img src="IMG-20250724-WA0023.jpg" alt="Post-session with international delegates" loading="lazy" />
+        <div class="photo-overlay"><div class="photo-overlay-text">With international delegates · IPS Madagascar</div></div>
+      </div>
+      <div class="photo-sm photo-cell" onclick="openLightbox(this)">
+        <img src="IMG-20250725-WA0026.jpg" alt="IPS Madagascar field excursion" loading="lazy" />
+        <div class="photo-overlay"><div class="photo-overlay-text">Field excursion · IPS Madagascar 2025</div></div>
+      </div>
     </div>
+    <p class="photo-caption">30th International Primatological Society Congress · Madagascar, July 2025 · Presenting "Targeted Genome Recovery from Fecal Samples: Mona Monkey Capture Using a Custom Probe Panel"</p>
+
+  </div>
+</section>
+
+<!-- OUTREACH -->
+<section>
+  <div class="section-inner">
+    <div class="section-label">Outreach &amp; Mentorship</div>
+    <h2 class="section-title">Training the next generation.<br>Engaging communities.</h2>
+    <p class="section-sub">Alongside research, I run conservation education and zoonotic disease awareness programs, train park rangers in biodiversity monitoring and eDNA sampling, and mentor early-career scientists across the US, Nigeria, Ghana, Togo, and Côte d'Ivoire.</p>
+    <div class="outreach-grid fade-in">
+      <div class="outreach-card">
+        <div class="outreach-num">1,300+</div>
+        <div class="outreach-label">Students, community members, and park rangers reached through conservation and zoonotic-disease education (2018–present)</div>
+      </div>
+      <div class="outreach-card">
+        <div class="outreach-num">51+</div>
+        <div class="outreach-label">Junior scientists and trainees mentored across USA, Nigeria, Ghana, and Côte d'Ivoire</div>
+      </div>
+      <div class="outreach-card">
+        <div class="outreach-num">27</div>
+        <div class="outreach-label">Park rangers trained in eDNA sampling, species ID, and biodiversity monitoring at Cross River and Gashaka Gumti NP</div>
+      </div>
+      <div class="outreach-card">
+        <div class="outreach-num">3</div>
+        <div class="outreach-label">Graduate students co-advised at Humboldt Research Hub — Center for Emerging and Re-emerging Infectious Diseases</div>
+      </div>
+    </div>
+
+    <!-- FIELD & COLLABORATION PHOTO GALLERY -->
+    <div class="gallery-label">In the field · International collaborations</div>
+    <div class="photo-masonry fade-in">
+      <div class="photo-cell photo-tall" onclick="openLightbox(this)">
+        <img src="IMG-20250802-WA0047.jpg" alt="International scientific delegates at IPS Madagascar field excursion" loading="lazy" style="height:450px;" />
+        <div class="photo-overlay"><div class="photo-overlay-text">International field excursion with IPS delegates · Madagascar</div></div>
+      </div>
+      <div class="photo-cell" onclick="openLightbox(this)">
+        <img src="IMG-20250727-WA0037.jpg" alt="Forest fieldwork with senior researchers in Madagascar" loading="lazy" />
+        <div class="photo-overlay"><div class="photo-overlay-text">Forest fieldwork with international collaborators · Madagascar</div></div>
+      </div>
+      <div class="photo-cell" onclick="openLightbox(this)">
+        <img src="IMG-20250730-WA0039.jpg" alt="IPS 2025 field group photo Madagascar" loading="lazy" />
+        <div class="photo-overlay"><div class="photo-overlay-text">IPS Madagascar 2025 — field programme delegates</div></div>
+      </div>
+      <div class="photo-cell" onclick="openLightbox(this)">
+        <img src="IMG-20250724-WA0023.jpg" alt="With international researchers after session" loading="lazy" />
+        <div class="photo-overlay"><div class="photo-overlay-text">Post-session with IPS international delegates</div></div>
+      </div>
+      <div class="photo-cell" onclick="openLightbox(this)">
+        <img src="IMG-20250725-WA0026.jpg" alt="IPS field programme group" loading="lazy" />
+        <div class="photo-overlay"><div class="photo-overlay-text">IPS field programme · Madagascar highlands</div></div>
+      </div>
+    </div>
+    <p class="photo-caption">Field research, international collaboration, and capacity-building across West Africa, Madagascar, and beyond — connecting computational genomics to in-situ biological systems.</p>
+
   </div>
 </section>
 
@@ -1604,49 +1646,82 @@
   </div>
 </section>
 
-<!-- ============ CONTACT ============ -->
-<section class="contact" id="contact">
-  <div class="container contact-grid">
-    <div class="contact-text reveal">
-      <span class="eyebrow">Contact</span>
-      <h2>Get in touch</h2>
-      <p>
-        I'm open to research collaborations, speaking invitations, and the right opportunity in
-        biotech, clinical genomics, or academic research. Email is the fastest way to reach me.
-      </p>
-    </div>
-    <div class="contact-card reveal">
-      <div class="c-row">
-        <span class="c-label">Email</span>
-        <span class="c-value"><a href="mailto:adeolaayoola52@gmail.com">adeolaayoola52@gmail.com</a></span>
+<!-- CONTACT -->
+<section id="contact">
+  <div class="section-inner">
+    <div class="section-label">Contact</div>
+    <h2 class="section-title">Let's connect</h2>
+    <div class="contact-grid fade-in">
+      <div>
+        <div class="avail-badge"><span class="avail-dot"></span>Open to collaborations &amp; opportunities</div>
+        <div class="contact-body">
+          <p>With particular interest in <strong>infectious disease genomics, population genetics, clinical research and translational multi-omics</strong>, I welcome collaborations and conversations at the intersection of computational biology, bioinformatics, and real-world biological impact.</p>
+          <p>If you are building a genomics team that demands both rigorous computational and translational depth, let's connect. I am open to industry, biotech, federal, and academic opportunities across <strong>RTP, Boston/Cambridge, Bay Area, and remote-first organizations</strong>.</p>
+          <p><strong>US Permanent Resident, no sponsorship required.</strong></p>
+        </div>
+        <div class="contact-items">
+          <div class="contact-item">
+            <div class="contact-label">Email</div>
+            <div class="contact-value"><a href="mailto:adeolaayoola52@gmail.com">adeolaayoola52@gmail.com</a></div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-label">Institutional</div>
+            <div class="contact-value"><a href="mailto:aayoola@mednet.ucla.edu">aayoola@mednet.ucla.edu</a></div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-label">Phone</div>
+            <div class="contact-value">+1 (984) 329-4409</div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-label">Location</div>
+            <div class="contact-value">Mebane, NC / Los Angeles, CA</div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-label">Status</div>
+            <div class="contact-value">US Permanent Resident · No sponsorship needed</div>
+          </div>
+        </div>
       </div>
-      <div class="c-row">
-        <span class="c-label">Institutional</span>
-        <span class="c-value"><a href="mailto:aayoola@mednet.ucla.edu">aayoola@mednet.ucla.edu</a></span>
-      </div>
-      <div class="c-row">
-        <span class="c-label">Phone</span>
-        <span class="c-value">+1 (984) 329-4409</span>
-      </div>
-      <div class="c-row">
-        <span class="c-label">Location</span>
-        <span class="c-value">Durham NC, Los Angeles, CA</span>
-      </div>
-      <div class="c-row">
-        <span class="c-label">Affiliation</span>
-        <span class="c-value">UCLA David Geffen School of Medicine</span>
-      </div>
-      <div class="socials">
-        <a href="https://scholar.google.com/citations?user=_vBiJnQAAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar ↗</a>
-        <a href="https://www.researchgate.net/profile/Adeola-Ayoola-2" target="_blank" rel="noopener">ResearchGate ↗</a>
-        <a href="https://www.linkedin.com/in/adeola-o-ayoola-ph-d-55934a138/" target="_blank" rel="noopener">LinkedIn ↗</a>
-        <a href="https://https://github.com/adeolaayoola-star" target="_blank" rel="noopener">Github ↗</a>
-        <a href="https://medschool.ucla.edu/people/adeola-ayoola-phd" target="_blank" rel="noopener">UCLA profile ↗</a>
+      <div class="contact-sidebar">
+        <a href="https://www.linkedin.com/in/adeola-o-ayoola-ph-d-55934a138/" class="link-card">
+          <div class="link-card-left">
+            <div class="link-card-label">LinkedIn</div>
+            <div class="link-card-name">Adeola O. Ayoola, PhD</div>
+          </div>
+          <div class="link-arrow">↗</div>
+        </a>
+        <a href="https://scholar.google.com/citations?user=_vBiJnQAAAAJ&hl=en" class="link-card">
+          <div class="link-card-left">
+            <div class="link-card-label">Google Scholar</div>
+            <div class="link-card-name">Publication record &amp; citations</div>
+          </div>
+          <div class="link-arrow">↗</div>
+        </a>
+        <a href="https://www.researchgate.net/profile/Adeola-Ayoola-2" class="link-card">
+          <div class="link-card-left">
+            <div class="link-card-label">ResearchGate</div>
+            <div class="link-card-name">Research profile</div>
+          </div>
+          <div class="link-arrow">↗</div>
+        </a>
+        <a href="https://github.com/adeolaayoola-star" class="link-card">
+          <div class="link-card-left">
+            <div class="link-card-label">GitHub</div>
+            <div class="link-card-name">adeolaayoola-star</div>
+          </div>
+          <div class="link-arrow">↗</div>
+        </a>
+        <a href="https://medschool.ucla.edu/people/adeola-ayoola-phd" class="link-card">
+          <div class="link-card-left">
+            <div class="link-card-label">UCLA Profile</div>
+            <div class="link-card-name">David Geffen School of Medicine</div>
+          </div>
+          <div class="link-arrow">↗</div>
+        </a>
       </div>
     </div>
   </div>
 </section>
-
 </main>
 
 <!-- ============ FOOTER ============ -->
